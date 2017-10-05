@@ -1,0 +1,130 @@
+@import "variables"
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	// font-family: $futura
+	// font-weight: 400
+
+body
+	font-size: 100%
+	background: $white
+
+h1
+	font-size: 3.5rem
+h2
+	font-size: 2.5rem
+// 	margin-bottom: 1rem
+h3
+	font-size: 2rem
+// 	margin-bottom: 0.2em
+h4
+	font-size: 1.4rem
+// 	margin-bottom: 0.2em
+p,a
+	font-size: 1.2rem
+// 	line-height: 1.4em
+
+// @media(max-width: 750px)
+// 	p,a
+// 		font-size: 1.1rem
+
+a:hover
+	// color: $dark-grey
+
+.inner
+	width: 90%
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0
+	position: relative
+
+.content-wrapper
+	padding: 4rem 0
+	overflow: hidden
+@media(max-width: 750px)
+	.content-wrapper
+		padding: 2rem 0
+
+.center
+	text-align: center
+.bold
+	font-weight: 600
+
+// --- Icons and logos ---
+.icon
+	display: block
+	padding: 0 0
+	text-indent: -9999px
+	background-size: 100% 100%
+	background-position: center center
+	background-repeat: no-repeat
+	position: relative
+
+// .logo-romsdalsbanken
+// 	background-image: url("../img/icons/romsdalsbanken_st.svg")
+// 	height: 100px
+
+// End of icons and logos
+
+// --- two-boxes ---
+.two-boxes
+	overflow: hidden
+	display: flex
+	align-items: center
+	.box
+		width: 49%
+		// float: left
+	.box:first-child
+		margin-right: 2%
+	p
+		margin-bottom: 1rem
+	p:last-child
+		margin-bottom: 0
+@media(max-width: 750px)
+	.two-boxes
+		flex-direction: column
+		.box
+			width: 100%
+		.box:first-child
+			margin-right: 0
+			margin-bottom: 2rem
+// end of two-boxes
+
+// --- three-boxes ---
+.three-boxes
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.box
+		width: 33.333333333%
+		display: flex
+		flex-direction: column
+
+@media(max-width: 750px)
+	.three-boxes
+		.box
+			width: 50%
+
+@media(max-width: 500px)
+	.three-boxes
+		.box
+			width: 100%
+// end of three-boxes
+
+.slideshow
+	display: none
+	position: relative
+	min-height: 100px
+
+	.slidesjs-previous
+		position: absolute
+		left: 0
+		top: 50%
+		z-index: 10
+	.slidesjs-next
+		position: absolute
+		right: 0
+		top: 50%
+		z-index: 10
