@@ -9,24 +9,132 @@
     <!-- Styling-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- bxSlider-->
+    <script src="js/bxslider/jquery.bxslider.min.js"></script>
+    <link href="js/bxslider/jquery.bxslider.css" rel="stylesheet">
     <!-- JS-->
     <script src="js/silseth.js"></script>
-    <!-- SlidesJS-->
-    <script src="js/jquery.slides.min.js"></script>
+    <!-- Mmenu -->
+    <link rel="stylesheet" href="lib/js/mmenu/css/jquery.mmenu.css" media="screen and (max-width: 700px)">
+    <link rel="stylesheet" href="lib/js/mmenu/extensions/positioning/jquery.mmenu.positioning.css" media="screen and (max-width: 700px)">
+    <script src="lib/js/mmenu/js/jquery.mmenu.min.js"></script><script src="https://use.typekit.net/mrh3ute.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
-  <body>
+  <body id="home">
+    <div id="mobilemenu_show" canvas="">
+      <div class="logo-wrapper"><a class="icon logo-silseth-sten" href="/">Logo for Silseth Sten</a></div><a class="hamburger" href="#mobilemenu">Vis meny</a>
+    </div>
+    <div class="menu mm-menu" id="mobilemenu" off-canvas="mobilemenu right shift">
+      <div id="menuwrapper">
+        <ul>
+          <li><a href="/">Forsiden</a></li>
+          <li><a href="minnestener.html">Minnestener</a></li>
+          <li><a href="tilbehor.html">Tilbehør</a></li>
+          <li><a href="bygningssten.html">Bygningssten</a></li>
+          <li><a href="om_oss.html">Om oss</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="large" id="menu">
+      <div class="inner">
+        <div class="upper"><a class="phone" href="tel:71299300">71 29 93 00 </a><span>&vert;</span><a class="mail" href="mailto:post@silseth-sten.no">post@silseth-sten.no</a></div>
+        <div class="lower">
+          <div class="logo-wrapper"><a class="icon logo-silseth-sten" href="/">Logo for Silseth Sten</a></div>
+          <div id="menuwrapper">
+            <ul>
+              <li><a href="/">Forsiden</a></li>
+              <li><a href="minnestener.html">Minnestener</a></li>
+              <li><a href="tilbehor.html">Tilbehør</a></li>
+              <li><a href="bygningssten.html">Bygningssten</a></li>
+              <li><a href="om_oss.html">Om oss</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="white-transparent" id="home_slideshow">
+      <div class="inner">
+        <div class="content-wrapper">
+          <div class="slideshow">
+            <div class="slide">
+              <div class="two-boxes">
+                <div class="box">
+                  <h2>Visuell kunst i glass</h2>
+                  <p>
+                    Vår lokale glasskunstner Sissel Solli Eide samarbeider med oss, og lager kunst i glass som blir innfelt i minnestenene. Kombinasjonen 
+                    glass/kunst polert og upolert stein gir et unikt og kraftfullt utrykk. 
+                  </p>
+                </div>
+                <div class="box"><img src="img/dummystein_1.png"></div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="two-boxes">
+                <div class="box">
+                  <h2>Tittel her...</h2>
+                  <p>
+                    Do elit non irure ita hic summis doctrina quamquam se nulla qui si minim arbitror ab illum voluptate ea exquisitaque ubi aliquip tamen probant nostrud, 
+                    ab quid quorum non quibusdam o non ne concursionibus, nescius culpa pariatur.
+                  </p>
+                </div>
+                <div class="box"><img src="img/dummystein_2.jpg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="inner">
         <div class="content-wrapper">
-          <div class="three-boxes">
+          <div class="two-boxes">
             <div class="box">
-              <div class="slideshow"><img src="img/001.jpg"><img src="img/002.jpg"><img src="img/003.jpg"><a class="slidesjs-previous slidesjs-navigation" href="#">back</a><a class="slidesjs-next slidesjs-navigation" href="#">next </a></div>
+              <h2>Design din egen minnesten</h2>
+              <p>
+                Med vår nye stenbygger kan du prøve deg fram med ulike steintyper, dekorelement og skrifttyper på noen utvalgte stener.</p><a class="btn" href="http://stenbygger.silseth-sten.no/">Design</a>
+            </div>
+            <div class="box"><img src="img/stenbygger.png"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="content-wrapper">
+          <h2>Minnestener </h2>
+          <div class="grid">
+            <div class="box"><img src="img/003.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+            <div class="box"><img src="img/002.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+            <div class="box"><img src="img/001.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+            <div class="box"><img src="img/002.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+            <div class="box"><img src="img/003.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+            <div class="box"><img src="img/001.jpg">
+              <p>Pris fra 20.200,-</p>
+            </div>
+          </div><a href="#">Se alle minnestener </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="content-wrapper">
+          <div class="two-boxes">
+            <div class="box"> 
+              <h2>Rett fra norsk natur - våre unike natursteiner</h2>
+              <!-- Link til punktet "naturstein" på undersiden minnestener--><a class="btn" href="#">Les mer</a>
             </div>
             <div class="box">
-              <div class="slideshow"><img src="img/001.jpg"><img src="img/002.jpg"><img src="img/003.jpg"><a class="slidesjs-previous slidesjs-navigation" href="#">back</a><a class="slidesjs-next slidesjs-navigation" href="#">next </a></div>
-            </div>
-            <div class="box">
-              <div class="slideshow"><img src="img/001.jpg"><img src="img/002.jpg"><img src="img/003.jpg"><a class="slidesjs-previous slidesjs-navigation" href="#">back</a><a class="slidesjs-next slidesjs-navigation" href="#">next </a></div>
+              <div class="slideshow"><img src="img/001.jpg"><img src="img/002.jpg"></div>
             </div>
           </div>
         </div>

@@ -2,30 +2,52 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "ff-enzo-web", sans-serif;
+  color: #000000; }
 
 body {
   font-size: 100%;
-  background: #ffffff; }
+  background: url(../img/background_top.jpg) top left no-repeat;
+  background-color: #ffffff; }
 
 h1 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 600; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2em; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600; }
 
 h4 {
-  font-size: 1.4rem; }
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600; }
 
 p, a {
-  font-size: 1.2rem; }
+  font-size: 1rem; }
+
+p {
+  line-height: 1.4em; }
+
+img {
+  width: 100%; }
+
+section {
+  border-bottom: 1px solid #000000; }
 
 .inner {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0;
   position: relative; }
@@ -38,11 +60,17 @@ p, a {
   .content-wrapper {
     padding: 2rem 0; } }
 
+section:first-of-type {
+  margin-top: 100px; }
+
 .center {
   text-align: center; }
 
 .bold {
   font-weight: 600; }
+
+.white-transparent {
+  background: rgba(255, 255, 255, 0.6); }
 
 .icon {
   display: block;
@@ -53,16 +81,203 @@ p, a {
   background-repeat: no-repeat;
   position: relative; }
 
+.logo-silseth-sten {
+  background-image: url(../img/icons/silseth_sten.svg);
+  display: inline-block;
+  font-size: 100px; }
+
+#mobilemenu_show {
+  display: none; }
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(212, 212, 212, 0.9);
+  padding: 20px 0;
+  overflow: hidden; }
+  #menu a {
+    text-decoration: none; }
+  #menu .upper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu .lower {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #menu .lower li {
+      display: inline; }
+      #menu .lower li a {
+        text-transform: uppercase;
+        font-weight: 700; }
+
+#menu.large {
+  height: 120px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  #menu.large .lower {
+    margin-top: -25px; }
+  #menu.large .logo-silseth-sten {
+    font-size: 100px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.large ul {
+    margin-top: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    #menu.large ul li a {
+      font-size: 1.1rem;
+      margin-left: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+
+@media (max-width: 1050px) {
+  #menu.large .upper a, #menu.large .upper span {
+    font-size: 0.9rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.large ul li a {
+    font-size: 1rem;
+    margin-left: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; } }
+
+@media (max-width: 900px) {
+  #menu.large {
+    height: 100px; }
+    #menu.large .upper a, #menu.large .upper span {
+      font-size: 0.8rem;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    #menu.large ul li a {
+      font-size: 0.9rem;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    #menu.large .logo-silseth-sten {
+      font-size: 80px; } }
+
+@media (max-width: 750px) {
+  #menu.large {
+    height: 100px; }
+    #menu.large ul li a {
+      font-size: 0.9rem;
+      margin-left: 5px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    #menu.large .logo-silseth-sten {
+      font-size: 75px; } }
+
+#menu.small {
+  height: 70px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  #menu.small .upper {
+    display: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.small .lower {
+    margin-top: -20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.small .logo-silseth-sten {
+    font-size: 70px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.small ul {
+    margin-top: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    #menu.small ul li a {
+      font-size: 1rem;
+      margin-left: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+
+@media (max-width: 900px) {
+  #menu.small ul li a {
+    font-size: 0.9rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; } }
+
+@media (max-width: 800px) {
+  #menu.small ul li a {
+    font-size: 0.8rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  #menu.small .logo-silseth-sten {
+    font-size: 65px; } }
+
+@media (max-width: 700px) {
+  section:first-of-type {
+    margin-top: 70px; }
+  #menu {
+    display: none; }
+  #mobilemenu_show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(212, 212, 212, 0.9); }
+    #mobilemenu_show .logo-wrapper {
+      position: absolute;
+      left: 5%; }
+    #mobilemenu_show .hamburger {
+      position: absolute;
+      right: 5%;
+      top: 20px; }
+    #mobilemenu_show .logo-silseth-sten {
+      font-size: 70px; } }
+
+@media (min-width: 700px) {
+  #mobilemenu {
+    display: none; } }
+
 .two-boxes {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  display: flex; }
   .two-boxes .box {
     width: 49%; }
   .two-boxes .box:first-child {
@@ -117,17 +332,49 @@ p, a {
   .three-boxes .box {
     width: 100%; } }
 
-.slideshow {
-  display: none;
-  position: relative;
-  min-height: 100px; }
-  .slideshow .slidesjs-previous {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    z-index: 10; }
-  .slideshow .slidesjs-next {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    z-index: 10; }
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .grid .box {
+    width: 32%; }
+
+@media (max-width: 700px) {
+  .grid .box {
+    width: 49%; } }
+
+.slideshow .two-boxes .box:first-child {
+  padding-left: 100px; }
+
+.slideshow .two-boxes .box:last-child {
+  padding-right: 100px; }
+
+@media (max-width: 750px) {
+  .slideshow .two-boxes .box {
+    width: 80%;
+    margin: 0 auto; }
+  .slideshow .two-boxes .box:first-child {
+    padding-left: 0;
+    margin-bottom: 2rem; }
+    .slideshow .two-boxes .box:first-child h2 {
+      text-align: center; }
+  .slideshow .two-boxes .box:last-child {
+    padding-right: 0; }
+    .slideshow .two-boxes .box:last-child img {
+      max-height: 250px;
+      margin: 0 auto;
+      width: auto; } }
+
+#home_slideshow .two-boxes {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }

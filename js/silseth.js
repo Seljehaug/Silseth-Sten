@@ -1,4 +1,6 @@
-var currentPosition = 0;
+var $mmenu,
+	mmenuapi,
+	currentPosition = 0;
 
 function parallaxObj($o, speed) {
 	"use strict";
@@ -68,6 +70,18 @@ $(function() {
 	"use strict";
 	currentPosition = $(window).scrollTop();
 
+	$mmenu = $("#mobilemenu").mmenu({
+		offCanvas: {
+			position: "right"
+		},
+		navbar: {
+			add: false,
+			title: "Meny",
+			titleLink: "Tilbake"
+		}
+	}, {});
+
+	mmenuapi = $mmenu.data("mmenu");
 
 	// Form validation
 	$('form.validate').find('input[type=submit]').on('click', function(e) {
@@ -84,25 +98,25 @@ $(function() {
 	});
 
 	// Initialize slideshow(s) on the page
-	$(".slideshow").slidesjs({
-		navigation: {
-			active: false,
-			effect: "slide"
-		},
-		// generateNextPrev: false,
-		pagination: false,
-		generatePagination: false,
-		autoHeight: true,
-		// aspect ratio
-		height: 100,
-		width: 260
+	$('.slideshow').bxSlider({
+		adaptiveHeight: true,
+		pager: false
 	});
+
+	$('.slideshow').addClass("bxslider");
 
 });
 
 $(window).scroll(function() {
 	"use strict";
 	currentPosition = $(window).scrollTop();
+
+	// Menu resizing
+	if($(document).scrollTop()>50) {
+		$("#menu").removeClass("large").addClass("small");
+	} else {
+		$("#menu").removeClass("small").addClass("large");
+	}
 
 	fadeInObjects();
 });

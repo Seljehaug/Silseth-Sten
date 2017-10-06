@@ -4,27 +4,40 @@
 	margin: 0
 	padding: 0
 	box-sizing: border-box
-	// font-family: $futura
-	// font-weight: 400
+	font-family: $enzo
+	color: $black
 
 body
 	font-size: 100%
-	background: $white
+	background: url(../img/background_top.jpg) top left no-repeat
+	background-color: $white
+	// background: url("../img/001.jpg")
 
 h1
 	font-size: 3.5rem
+	text-transform: uppercase
+	font-weight: 600
 h2
-	font-size: 2.5rem
-// 	margin-bottom: 1rem
+	font-size: 1.8rem
+	text-transform: uppercase
+	font-weight: 600
+	margin-bottom: 1rem
+	line-height: 1.2em
 h3
-	font-size: 2rem
-// 	margin-bottom: 0.2em
+	font-size: 1.5rem
+	text-transform: uppercase
+	font-weight: 600
+ // 	margin-bottom: 0.2em
 h4
-	font-size: 1.4rem
+	font-size: 1.2rem
+	text-transform: uppercase
+	font-weight: 600
 // 	margin-bottom: 0.2em
 p,a
-	font-size: 1.2rem
-// 	line-height: 1.4em
+	font-size: 1rem
+
+p
+	line-height: 1.4em
 
 // @media(max-width: 750px)
 // 	p,a
@@ -33,9 +46,15 @@ p,a
 a:hover
 	// color: $dark-grey
 
+img
+	width: 100%
+
+section
+	border-bottom: 1px solid $black
+
 .inner
 	width: 90%
-	max-width: 1200px
+	max-width: 1000px
 	margin: 0 auto
 	padding: 0
 	position: relative
@@ -47,10 +66,16 @@ a:hover
 	.content-wrapper
 		padding: 2rem 0
 
+section:first-of-type
+	margin-top: 100px
+
 .center
 	text-align: center
 .bold
 	font-weight: 600
+
+.white-transparent
+	background: rgba(255, 255, 255, 0.6)
 
 // --- Icons and logos ---
 .icon
@@ -62,17 +87,166 @@ a:hover
 	background-repeat: no-repeat
 	position: relative
 
-// .logo-romsdalsbanken
-// 	background-image: url("../img/icons/romsdalsbanken_st.svg")
-// 	height: 100px
+.logo-silseth-sten
+	background-image: url(../img/icons/silseth_sten.svg)
+	display: inline-block
+	font-size: 100px
 
 // End of icons and logos
+
+// --- menu ---
+#mobilemenu_show
+	display: none
+
+#menu
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	background: $grey-transparent
+	padding: 20px 0
+	overflow: hidden
+
+	a
+		text-decoration: none
+
+	.upper
+		display: flex
+		flex-direction: row-reverse
+		transition: all 0.3s ease-in-out
+
+	.lower
+		display: flex
+		align-items: center
+		justify-content: space-between
+		li
+			display: inline
+			a
+				text-transform: uppercase
+				font-weight: 700
+
+#menu.large
+	height: 120px
+	transition: all 0.3s ease-in-out
+	.lower
+		margin-top: -25px
+	.logo-silseth-sten
+		font-size: 100px
+		transition: all 0.3s ease-in-out
+	ul
+		margin-top: 20px
+		transition: all 0.3s ease-in-out
+		li a
+			font-size: 1.1rem
+			margin-left: 20px
+			transition: all 0.3s ease-in-out
+
+@media(max-width: 1050px)
+	#menu.large
+		.upper
+			a,span
+				font-size: 0.9rem
+				transition: all 0.3s ease-in-out
+		ul li a
+			font-size: 1rem
+			margin-left: 10px
+			transition: all 0.3s ease-in-out
+		.logo-silseth-sten
+			// font-size: 70px
+
+@media(max-width: 900px)
+	#menu.large
+		height: 100px
+		.upper
+			a,span
+				font-size: 0.8rem
+				transition: all 0.3s ease-in-out
+		ul li a
+			font-size: 0.9rem
+			transition: all 0.3s ease-in-out
+		.logo-silseth-sten
+			font-size: 80px
+
+@media(max-width: 750px)
+	#menu.large
+		height: 100px
+		ul li a
+			font-size: 0.9rem
+			margin-left: 5px
+			transition: all 0.3s ease-in-out
+		.logo-silseth-sten
+			font-size: 75px
+
+#menu.small
+	height: 70px
+	transition: all 0.3s ease-in-out
+	.upper
+		display: none
+		transition: all 0.3s ease-in-out
+	.lower
+		margin-top: -20px
+		transition: all 0.3s ease-in-out
+	.logo-silseth-sten
+		font-size: 70px
+		transition: all 0.3s ease-in-out
+
+	ul
+		margin-top: 10px
+		transition: all 0.3s ease-in-out
+		li a
+			font-size: 1rem
+			margin-left: 20px
+			transition: all 0.3s ease-in-out
+
+@media(max-width: 900px)
+	#menu.small
+		ul li a
+			font-size: 0.9rem
+			transition: all 0.3s ease-in-out
+
+@media(max-width: 800px)
+	#menu.small
+		ul li a
+			font-size: 0.8rem
+			transition: all 0.3s ease-in-out
+		.logo-silseth-sten
+			font-size: 65px
+
+@media(max-width: 700px)
+	section:first-of-type
+		margin-top: 70px
+
+	#menu
+		display: none
+	#mobilemenu_show
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 70px
+		background: $grey-transparent
+		.logo-wrapper
+			position: absolute
+			left: 5%
+		.hamburger
+			position: absolute
+			right: 5%
+			top: 20px
+
+		.logo-silseth-sten
+			font-size: 70px
+@media(min-width: 700px)
+	#mobilemenu
+		display: none
+// end of menu
 
 // --- two-boxes ---
 .two-boxes
 	overflow: hidden
 	display: flex
-	align-items: center
+	// align-items: center
 	.box
 		width: 49%
 		// float: left
@@ -113,18 +287,60 @@ a:hover
 			width: 100%
 // end of three-boxes
 
-.slideshow
-	display: none
-	position: relative
-	min-height: 100px
+// --- grid ---
+.grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.box
+		// 2% margin for eslidevery third element
+		width: 32%
 
-	.slidesjs-previous
-		position: absolute
-		left: 0
-		top: 50%
-		z-index: 10
-	.slidesjs-next
-		position: absolute
-		right: 0
-		top: 50%
-		z-index: 10
+@media(max-width: 700px)
+	.grid
+		.box
+			// 2% margin between every element
+			width: 49%
+
+// @media(max-width: 400px)
+// 	.grid
+// 		.box
+// 			width: 100%
+
+// end of grid
+
+// --- slideshow ---
+.slideshow
+	.two-boxes
+		// width: 80%
+		// margin: 0 auto
+		.box:first-child
+			padding-left: 100px
+		.box:last-child
+			padding-right: 100px
+@media(max-width: 750px)
+	.slideshow .two-boxes
+		.box
+			width: 80%
+			margin: 0 auto
+		.box:first-child
+			padding-left: 0
+			margin-bottom: 2rem
+			h2
+				text-align: center
+		.box:last-child
+			padding-right: 0
+			img
+				max-height: 250px
+				margin: 0 auto
+				width: auto
+
+	// .bx-wrapper .bx-controls-direction a
+		// z-index: 10
+	// .bx-controls-direction .bx-prev
+		// transform: rotate(180deg)
+// end of slideshow
+
+#home_slideshow
+	.two-boxes
+		align-items: center

@@ -1,0 +1,1287 @@
+@charset "UTF-8";
+/* cmsms stylesheet: normalize4 modified: 03. juli 2017 kl. 11.20 +0200 */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ *
+ * 1. Change the default font family in all browsers (opinionated).
+ *
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS. */
+/* line 10, csspreprocessor.sass */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ *
+ * Remove the margin in all browsers (opinionated). */
+/* line 28, csspreprocessor.sass */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+ *
+ * ========================================================================== */
+/**
+ *
+ * Add the correct display in IE 9-.
+ *
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ *
+ * 2. Add the correct display in IE. */
+/* line 44, csspreprocessor.sass */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  /* 1 */
+  display: block; }
+
+/**
+ *
+ * Add the correct display in IE 9-. */
+/* line 54, csspreprocessor.sass */
+audio, canvas, progress, video {
+  display: inline-block; }
+
+/**
+ *
+ * Add the correct display in iOS 4-7. */
+/* line 62, csspreprocessor.sass */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ *
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+/* line 72, csspreprocessor.sass */
+progress {
+  vertical-align: baseline; }
+
+/**
+ *
+ * Add the correct display in IE 10-.
+ *
+ * 1. Add the correct display in IE. */
+/* line 82, csspreprocessor.sass */
+template, [hidden] {
+  display: none; }
+
+/* Links
+ *
+ * ========================================================================== */
+/**
+ *
+ * 1. Remove the gray background on active links in IE 10.
+ *
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+. */
+/* line 96, csspreprocessor.sass */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+  /* line 106, csspreprocessor.sass */
+  a:active, a:hover {
+    outline-width: 0; }
+
+/**
+ *
+ * Remove the outline on focused links when they are also active or hovered
+ *
+ * in all browsers (opinionated). */
+/* Text-level semantics
+ *
+ * ========================================================================== */
+/**
+ *
+ * 1. Remove the bottom border in Firefox 39-.
+ *
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+/* line 126, csspreprocessor.sass */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ *
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6. */
+/* line 144, csspreprocessor.sass */
+b, strong {
+  font-weight: inherit; }
+
+/**
+ *
+ * Add the correct font weight in Chrome, Edge, and Safari. */
+/* line 152, csspreprocessor.sass */
+b, strong {
+  font-weight: bolder; }
+
+/**
+ *
+ * Add the correct font style in Android 4.3-. */
+/* line 160, csspreprocessor.sass */
+dfn {
+  font-style: italic; }
+
+/**
+ *
+ * Correct the font size and margin on `h1` elements within `section` and
+ *
+ * `article` contexts in Chrome, Firefox, and Safari. */
+/* line 170, csspreprocessor.sass */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ *
+ * Add the correct background and color in IE 9-. */
+/* line 180, csspreprocessor.sass */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ *
+ * Add the correct font size in all browsers. */
+/* line 190, csspreprocessor.sass */
+small {
+  font-size: 80%; }
+
+/**
+ *
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ *
+ * all browsers. */
+/* line 200, csspreprocessor.sass */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 210, csspreprocessor.sass */
+sub {
+  bottom: -0.25em; }
+
+/* line 214, csspreprocessor.sass */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+ *
+ * ========================================================================== */
+/**
+ *
+ * Remove the border on images inside links in IE 10-. */
+/* line 226, csspreprocessor.sass */
+img {
+  border-style: none; }
+
+/**
+ *
+ * Hide the overflow in IE. */
+/* line 234, csspreprocessor.sass */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+ *
+ * ========================================================================== */
+/**
+ *
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ *
+ * 2. Correct the odd `em` font sizing in all browsers. */
+/* line 248, csspreprocessor.sass */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ *
+ * Add the correct margin in IE 8. */
+/* line 262, csspreprocessor.sass */
+figure {
+  margin: 1em 40px; }
+
+/**
+ *
+ * 1. Add the correct box sizing in Firefox.
+ *
+ * 2. Show the overflow in Edge and IE. */
+/* line 272, csspreprocessor.sass */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+ *
+ * ========================================================================== */
+/**
+ *
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ *
+ * 2. Remove the margin in Firefox and Safari. */
+/* line 296, csspreprocessor.sass */
+button, input, select, textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ *
+ * Restore the font weight unset by the previous rule. */
+/* line 310, csspreprocessor.sass */
+optgroup {
+  font-weight: bold; }
+
+/**
+ *
+ * Show the overflow in IE.
+ *
+ * 1. Show the overflow in Edge. */
+/* line 320, csspreprocessor.sass */
+button, input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ *
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ *
+ * 1. Remove the inheritance of text transform in Firefox. */
+/* line 332, csspreprocessor.sass */
+button, select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ *
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *
+ *		controls in Android 4.
+ *
+ * 2. Correct the inability to style clickable types in iOS and Safari. */
+/* line 346, csspreprocessor.sass */
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ *
+ * Remove the inner border and padding in Firefox. */
+/* line 356, csspreprocessor.sass */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ *
+ * Restore the focus styles unset by the previous rule. */
+/* line 366, csspreprocessor.sass */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ *
+ * Change the border, margin, and padding in all browsers (opinionated). */
+/* line 374, csspreprocessor.sass */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ *
+ * 1. Correct the text wrapping in Edge and IE.
+ *
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ *
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *
+ *		`fieldset` elements in all browsers. */
+/* line 392, csspreprocessor.sass */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ *
+ * Remove the default vertical scrollbar in IE. */
+/* line 422, csspreprocessor.sass */
+textarea {
+  overflow: auto; }
+
+/**
+ *
+ * 1. Add the correct box sizing in IE 10-.
+ *
+ * 2. Remove the padding in IE 10-. */
+/* line 432, csspreprocessor.sass */
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ *
+ * Correct the cursor style of increment and decrement buttons in Chrome. */
+/* line 448, csspreprocessor.sass */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ *
+ * 1. Correct the odd appearance in Chrome and Safari.
+ *
+ * 2. Correct the outline style in Safari. */
+/* line 458, csspreprocessor.sass */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+  /* line 468, csspreprocessor.sass */
+  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/**
+ *
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X. */
+/**
+ *
+ * Correct the text style of placeholders in Chrome, Edge, and Safari. */
+/* line 480, csspreprocessor.sass */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ *
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ *
+ * 2. Change font properties to `inherit` in Safari. */
+/* line 492, csspreprocessor.sass */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* cmsms stylesheet: bs17 variables modified: 03. juli 2017 kl. 11.47 +0200 */
+/* cmsms stylesheet: bs17 styles modified: 05. juli 2017 kl. 15.27 +0200 */
+/* line 512, csspreprocessor.sass */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "aller", sans-serif; }
+
+/* line 518, csspreprocessor.sass */
+body {
+  font-weight: 300;
+  font-size: 100%;
+  position: relative; }
+
+/* line 524, csspreprocessor.sass */
+#site {
+  background: #ffffff; }
+
+/* line 527, csspreprocessor.sass */
+h1 {
+  font-size: 2rem;
+  font-weight: 300; }
+
+/* line 530, csspreprocessor.sass */
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5em;
+  font-weight: 400; }
+
+/* line 534, csspreprocessor.sass */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+/* line 537, csspreprocessor.sass */
+h4 {
+  font-size: 1.2rem;
+  font-weight: 300; }
+
+/* line 540, csspreprocessor.sass */
+h5 {
+  font-size: 1rem;
+  font-weight: 700; }
+
+@media(max-width: 500px) {
+  /* line 545, csspreprocessor.sass */
+  h1 {
+    font-size: 1.75rem; }
+
+  /* line 547, csspreprocessor.sass */
+  h2 {
+    font-size: 1.5rem; }
+
+  /* line 549, csspreprocessor.sass */
+  h3 {
+    font-size: 1.35rem; } }
+/* line 552, csspreprocessor.sass */
+a {
+  color: #c34762;
+  text-decoration: none; }
+  /* line 555, csspreprocessor.sass */
+  a:hover {
+    text-decoration: underline; }
+
+/* line 558, csspreprocessor.sass */
+p {
+  margin-bottom: 1em; }
+
+/* line 561, csspreprocessor.sass */
+.btn {
+  background: #c34762;
+  color: #ffffff;
+  padding: 0.4em 1.2em;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out; }
+  /* line 568, csspreprocessor.sass */
+  .btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background: #808991;
+    transition: all 0.2s ease-in-out; }
+
+/* line 577, csspreprocessor.sass */
+section {
+  width: 100%;
+  clear: both; }
+
+/* line 581, csspreprocessor.sass */
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px; }
+
+@media(max-width: 700px) {
+  /* line 588, csspreprocessor.sass */
+  .inner {
+    padding: 0;
+    width: 95%; } }
+/* line 592, csspreprocessor.sass */
+.content-box {
+  width: 100%;
+  padding: 4rem 0 4rem 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  clear: both; }
+  /* line 599, csspreprocessor.sass */
+  .content-box .box {
+    float: left; }
+
+@media(max-width: 1200px) {
+  /* line 603, csspreprocessor.sass */
+  .content-box {
+    padding: 2rem 0 2rem 50px; } }
+@media(max-width: 700px) {
+  /* line 607, csspreprocessor.sass */
+  .content-box {
+    padding: 1rem; }
+    /* line 609, csspreprocessor.sass */
+    .content-box .box {
+      width: 100%; } }
+/* line 612, csspreprocessor.sass */
+.spacer {
+  margin-top: 100px; }
+
+@media(max-width: 700px) {
+  /* line 616, csspreprocessor.sass */
+  .spacer {
+    margin-top: 50px; } }
+/* line 620, csspreprocessor.sass */
+.icon {
+  display: block;
+  padding: 0 0;
+  text-indent: -9999px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* line 629, csspreprocessor.sass */
+.logo-bunadstudio {
+  height: 75px;
+  width: 200px;
+  background-image: url("/uploads/images/icons/bunadstudio_uten_strek.svg");
+  background-image: linear-gradient(transparent, transparent), url("/uploads/images/icons/bunadstudio_uten_strek.svg"); }
+
+/* line 635, csspreprocessor.sass */
+.icons-row .icon {
+  height: 100px; }
+
+/* line 638, csspreprocessor.sass */
+.needle-icon {
+  background-image: url("/uploads/images/icons/nål.svg");
+  height: 100px; }
+
+/* line 642, csspreprocessor.sass */
+.tradition-icon {
+  background-image: url("/uploads/images/icons/tradisjon.svg");
+  height: 100px; }
+
+/* line 646, csspreprocessor.sass */
+.flag-icon {
+  background-image: url("/uploads/images/icons/norsk_flagg.svg");
+  height: 100px; }
+
+/* line 654, csspreprocessor.sass */
+.pink-line-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; }
+  /* line 660, csspreprocessor.sass */
+  .pink-line-wrapper .inner {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+    /* line 664, csspreprocessor.sass */
+    .pink-line-wrapper .inner .pink-line {
+      background-image: url("/uploads/images/icons/logolinje-rosa.png");
+      width: 2px;
+      background-repeat: repeat-y;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1; }
+
+/* line 675, csspreprocessor.sass */
+#menu .inner .pink-line-wrapper {
+  left: 0; }
+
+/* line 679, csspreprocessor.sass */
+.white-line {
+  position: absolute;
+  background: url("/uploads/images/icons/logolinje-hvit.png");
+  width: 2px;
+  background-repeat: repeat-y;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  z-index: 2; }
+
+@media(max-width: 700px) {
+  /* line 691, csspreprocessor.sass */
+  .pink-line-wrapper {
+    display: none; }
+
+  /* line 693, csspreprocessor.sass */
+  .white-line {
+    display: none; } }
+/* line 727, csspreprocessor.sass */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff; }
+  /* line 737, csspreprocessor.sass */
+  #menu .inner {
+    position: relative;
+    overflow: hidden;
+    min-height: 100px; }
+  /* line 741, csspreprocessor.sass */
+  #menu .logo-wrapper {
+    position: absolute;
+    left: 20px;
+    bottom: 10px; }
+  /* line 745, csspreprocessor.sass */
+  #menu #menuwrapper {
+    position: absolute;
+    right: 0;
+    bottom: 10px; }
+  /* line 751, csspreprocessor.sass */
+  #menu ul li {
+    float: left;
+    margin-right: 2em;
+    list-style-type: none; }
+    /* line 755, csspreprocessor.sass */
+    #menu ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 1.1rem;
+      transition: all 0.2s ease-in-out; }
+      /* line 760, csspreprocessor.sass */
+      #menu ul li a:hover {
+        color: #c34762;
+        transition: all 0.2s ease-in-out; }
+  /* line 763, csspreprocessor.sass */
+  #menu ul .currentpage {
+    font-weight: 400;
+    position: relative; }
+    /* line 766, csspreprocessor.sass */
+    #menu ul .currentpage::before {
+      content: "";
+      position: absolute;
+      background: #c34762;
+      top: -75px;
+      height: 75px;
+      width: 2px;
+      left: 50%; }
+    /* line 774, csspreprocessor.sass */
+    #menu ul .currentpage::after {
+      content: "";
+      position: absolute;
+      background: #c34762;
+      left: 50%;
+      width: 2px;
+      height: 35px;
+      top: 25px; }
+
+@media(max-width: 800px) {
+  /* line 784, csspreprocessor.sass */
+  #menu ul li a {
+    font-size: 0.85rem; } }
+@media(max-width: 700px) {
+  /* line 788, csspreprocessor.sass */
+  #menu .pink-line {
+    display: none; }
+
+  /* line 791, csspreprocessor.sass */
+  #menu .logo-wrapper {
+    left: 0; } }
+/* line 797, csspreprocessor.sass */
+#mobilemenu {
+  /*display: none */ }
+
+/* line 800, csspreprocessor.sass */
+#mobilemenu_show {
+  position: fixed;
+  display: none;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  background: #ffffff;
+  width: 100%; }
+
+/* line 809, csspreprocessor.sass */
+#mobilemenu_show a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("/uploads/images/icons/menu_icon.png");
+  /*background-size: 19px 15px */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  float: right; }
+
+/* line 821, csspreprocessor.sass */
+#mobilemenu_show .logo-wrapper {
+  float: left;
+  margin-left: 10px; }
+  /* line 824, csspreprocessor.sass */
+  #mobilemenu_show .logo-wrapper .icon {
+    width: 85px;
+    background-image: url("/uploads/images/icons/bunadstudio_uten_strek.svg"); }
+
+/* line 828, csspreprocessor.sass */
+.mm-menu, .mm-panels > .mm-panel:not(.mm-hidden) {
+  background: #c34762;
+  /*opacity: 0.95 */
+  color: #ffffff; }
+  /* line 833, csspreprocessor.sass */
+  .mm-menu .mm-listview > li, .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li {
+    color: #ffffff;
+    border-color: #ffffff;
+    margin-left: -22px; }
+    /* line 838, csspreprocessor.sass */
+    .mm-menu .mm-listview > li a, .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a {
+      font-size: 1.25rem;
+      padding: 1em 0 1em 42px;
+      text-transform: uppercase;
+      font-weight: 400; }
+      /* line 843, csspreprocessor.sass */
+      .mm-menu .mm-listview > li a:active, .mm-menu .mm-listview > li a:focus, .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:active, .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:focus {
+        color: #c34762;
+        background: #ffffff;
+        opacity: 1; }
+    /* line 848, csspreprocessor.sass */
+    .mm-menu .mm-listview > li a:not(.mm-next), .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:not(.mm-next) {
+      -webkit-tap-highlight-color: transparent;
+      tap-highlight-color: transparent; }
+
+/* line 852, csspreprocessor.sass */
+.mm-menu {
+  display: none;
+  /*background: #222 */
+  /*color: #FFF */
+  /*text-transform: uppercase */
+  /*font-size: 1.0em */
+  /*position: relative */ }
+
+@media(max-width: 700px) {
+  /* line 862, csspreprocessor.sass */
+  #menu {
+    display: none; }
+
+  /* line 864, csspreprocessor.sass */
+  .mm-menu {
+    display: block; }
+
+  /* line 866, csspreprocessor.sass */
+  #mobilemenu_show {
+    display: block; } }
+/* line 872, csspreprocessor.sass */
+#footer {
+  color: #ffffff; }
+  /* line 875, csspreprocessor.sass */
+  #footer .upper {
+    background: #c34762; }
+    /* line 877, csspreprocessor.sass */
+    #footer .upper .inner {
+      position: relative;
+      padding: 4em 0;
+      display: flex; }
+    /* line 881, csspreprocessor.sass */
+    #footer .upper .logo-wrapper {
+      width: 50%;
+      margin-left: 20px; }
+    /* line 884, csspreprocessor.sass */
+    #footer .upper .boxes-wrapper {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end; }
+    /* line 888, csspreprocessor.sass */
+    #footer .upper h3 {
+      margin-bottom: 10px; }
+    /* line 890, csspreprocessor.sass */
+    #footer .upper p {
+      margin-bottom: 5px; }
+    /* line 892, csspreprocessor.sass */
+    #footer .upper h5 {
+      margin-bottom: 5px; }
+    /* line 894, csspreprocessor.sass */
+    #footer .upper a {
+      color: #ffffff;
+      text-decoration: none; }
+      /* line 897, csspreprocessor.sass */
+      #footer .upper a:hover {
+        text-decoration: underline; }
+    /* line 900, csspreprocessor.sass */
+    #footer .upper .visit-us {
+      margin-right: 2em; }
+      /* line 902, csspreprocessor.sass */
+      #footer .upper .visit-us h5 {
+        margin-top: 20px; }
+    /* line 904, csspreprocessor.sass */
+    #footer .upper .contact-us {
+      margin-left: 2em;
+      margin-right: 20px; }
+      /* line 907, csspreprocessor.sass */
+      #footer .upper .contact-us h5:last-of-type {
+        margin-top: 20px; }
+  /* line 917, csspreprocessor.sass */
+  #footer #footer-map {
+    width: 100%;
+    height: 400px; }
+    /* line 922, csspreprocessor.sass */
+    #footer #footer-map .gm-style-iw {
+      color: black; }
+  /* line 927, csspreprocessor.sass */
+  #footer .lower {
+    background: #dee2e0;
+    min-height: 100px; }
+    /* line 930, csspreprocessor.sass */
+    #footer .lower .inner {
+      position: relative; }
+    /* line 932, csspreprocessor.sass */
+    #footer .lower .content-box {
+      display: flex;
+      justify-content: center; }
+    /* line 935, csspreprocessor.sass */
+    #footer .lower .box {
+      text-align: center; }
+    /* line 937, csspreprocessor.sass */
+    #footer .lower h4 {
+      text-transform: uppercase;
+      color: #808991;
+      margin-bottom: 1em; }
+    /* line 941, csspreprocessor.sass */
+    #footer .lower img {
+      height: 100px; }
+    /* line 943, csspreprocessor.sass */
+    #footer .lower .logo-romsdalsmuseet {
+      margin-right: 4rem; }
+    /* line 945, csspreprocessor.sass */
+    #footer .lower .logo-economusee {
+      margin-left: 4rem; }
+
+@media(max-width: 1100px) {
+  /* line 952, csspreprocessor.sass */
+  #footer .upper .logo-wrapper {
+    width: 40%; }
+  /* line 954, csspreprocessor.sass */
+  #footer .upper .boxes-wrapper {
+    width: 60%; } }
+@media(max-width: 1000px) {
+  /* line 959, csspreprocessor.sass */
+  #footer .lower .logo-romsdalsmuseet {
+    margin-right: 3em; }
+  /* line 961, csspreprocessor.sass */
+  #footer .lower .logo-economusee {
+    margin-left: 3em; } }
+@media(max-width: 850px) {
+  /* line 966, csspreprocessor.sass */
+  #footer .upper .logo-wrapper {
+    width: 30%; }
+  /* line 968, csspreprocessor.sass */
+  #footer .upper .boxes-wrapper {
+    width: 70%; }
+  /* line 970, csspreprocessor.sass */
+  #footer .upper .visit-us {
+    margin-right: 1em; }
+  /* line 972, csspreprocessor.sass */
+  #footer .upper .contact-us {
+    margin-left: 1em; }
+
+  /* line 976, csspreprocessor.sass */
+  #footer .lower .logo-romsdalsmuseet, #footer .lower .logo-economusee {
+    width: 50%;
+    margin: 0; }
+  /* line 979, csspreprocessor.sass */
+  #footer .lower img {
+    height: 75px; } }
+@media(max-width: 700px) {
+  /* line 985, csspreprocessor.sass */
+  #footer .upper .inner {
+    padding: 2em 0; }
+  /* line 987, csspreprocessor.sass */
+  #footer .upper .logo-wrapper {
+    display: none; }
+  /* line 989, csspreprocessor.sass */
+  #footer .upper .boxes-wrapper {
+    justify-content: space-around;
+    width: 100%; }
+  /* line 992, csspreprocessor.sass */
+  #footer .upper .visit-us {
+    margin: 0; }
+  /* line 994, csspreprocessor.sass */
+  #footer .upper .contact-us {
+    margin: 0; }
+  /* line 998, csspreprocessor.sass */
+  #footer .lower .logo-romsdalsmuseet, #footer .lower .logo-economusee {
+    width: 30%; }
+  /* line 1000, csspreprocessor.sass */
+  #footer .lower h4 {
+    font-size: 0.8rem; }
+  /* line 1002, csspreprocessor.sass */
+  #footer .lower img {
+    height: 50px; } }
+@media(max-width: 500px) {
+  /* line 1007, csspreprocessor.sass */
+  #footer .upper {
+    flex-direction: row; }
+    /* line 1009, csspreprocessor.sass */
+    #footer .upper .boxes-wrapper {
+      flex-direction: column;
+      align-items: center; }
+    /* line 1012, csspreprocessor.sass */
+    #footer .upper .visit-us {
+      margin-bottom: 2em; }
+    /* line 1014, csspreprocessor.sass */
+    #footer .upper .contact-us {
+      margin-left: -10px; }
+  /* line 1019, csspreprocessor.sass */
+  #footer .lower .logo-romsdalsmuseet, #footer .lower .logo-economusee {
+    width: 40%; } }
+@media(max-width: 320px) {
+  /* line 1023, csspreprocessor.sass */
+  #footer .lower h4 {
+    font-size: 0.75rem; }
+  /* line 1025, csspreprocessor.sass */
+  #footer .lower .logo-romsdalsmuseet, #footer .lower .logo-economusee {
+    width: 40%; }
+  /* line 1027, csspreprocessor.sass */
+  #footer .lower img {
+    height: 40px; } }
+/* line 1032, csspreprocessor.sass */
+.subpage-banner {
+  background: #ffffff;
+  position: relative;
+  top: 100px;
+  margin-bottom: 100px; }
+  /* line 1037, csspreprocessor.sass */
+  .subpage-banner img {
+    width: 100%;
+    margin-bottom: -5px; }
+  /* line 1040, csspreprocessor.sass */
+  .subpage-banner h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #c34762;
+    opacity: 0.85;
+    color: #ffffff;
+    text-align: center;
+    margin-top: -102px;
+    margin-bottom: 0;
+    padding: 1em 100px 1em 100px;
+    padding: 1em 0; }
+
+/* line 1054, csspreprocessor.sass */
+.subpage-banner-no-img {
+  position: relative;
+  top: 75px;
+  margin-bottom: 75px;
+  background: #c34762; }
+  /* line 1059, csspreprocessor.sass */
+  .subpage-banner-no-img .inner h1 {
+    opacity: 0.85;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em; }
+
+/* line 1065, csspreprocessor.sass */
+.subpage-banner-no-text {
+  position: relative;
+  top: 100px;
+  margin-bottom: 95px; }
+  /* line 1069, csspreprocessor.sass */
+  .subpage-banner-no-text .img-wrapper {
+    width: 100%; }
+    /* line 1071, csspreprocessor.sass */
+    .subpage-banner-no-text .img-wrapper img {
+      width: 100%; }
+
+@media(max-width: 750px) {
+  /* line 1075, csspreprocessor.sass */
+  .subpage-banner {
+    margin-bottom: 154px;
+    top: 50px; }
+    /* line 1079, csspreprocessor.sass */
+    .subpage-banner h1 {
+      margin-top: 0;
+      opacity: 1; } }
+@media(max-width: 700px) {
+  /* line 1084, csspreprocessor.sass */
+  .subpage-banner-no-img {
+    top: 25px;
+    margin-bottom: 25px; }
+
+  /* line 1087, csspreprocessor.sass */
+  .subpage-banner-no-text {
+    top: 50px;
+    margin-bottom: 45px; } }
+@media(max-width: 600px) {
+  /* line 1092, csspreprocessor.sass */
+  .subpage-banner {
+    margin-bottom: 192px; }
+    /* line 1094, csspreprocessor.sass */
+    .subpage-banner h1 span {
+      display: block; } }
+@media(max-width: 500px) {
+  /* line 1098, csspreprocessor.sass */
+  .subpage-banner {
+    margin-bottom: 145px; }
+    /* line 1100, csspreprocessor.sass */
+    .subpage-banner h1 {
+      padding: 0.5em; } }
+/* line 1106, csspreprocessor.sass */
+.text-left-img-right {
+  background: #dee2e0; }
+  /* line 1108, csspreprocessor.sass */
+  .text-left-img-right .inner {
+    background: #dee2e0;
+    overflow: hidden; }
+  /* line 1111, csspreprocessor.sass */
+  .text-left-img-right .content-box {
+    position: relative; }
+  /* line 1113, csspreprocessor.sass */
+  .text-left-img-right .box {
+    width: 50%; }
+  /* line 1115, csspreprocessor.sass */
+  .text-left-img-right .img-box {
+    position: absolute;
+    top: 0;
+    right: -40px; }
+  /* line 1119, csspreprocessor.sass */
+  .text-left-img-right img {
+    width: 100%; }
+
+@media(max-width: 1000px) {
+  /* line 1124, csspreprocessor.sass */
+  .text-left-img-right .content-box .img-box {
+    top: 2em; } }
+@media(max-width: 850px) {
+  /* line 1129, csspreprocessor.sass */
+  .text-left-img-right .content-box .text-box {
+    width: 100%; }
+  /* line 1131, csspreprocessor.sass */
+  .text-left-img-right .content-box .img-box {
+    display: none; } }
+/* line 1136, csspreprocessor.sass */
+.tile-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*.content-box
+   * display: flex
+   * justify-content: space-between
+   * flex-wrap: wrap */ }
+  /* line 1144, csspreprocessor.sass */
+  .tile-grid .tile {
+    display: inline-block;
+    width: 23%;
+    margin-bottom: 50px; }
+    /* line 1148, csspreprocessor.sass */
+    .tile-grid .tile img {
+      width: 100%; }
+
+@media(max-width: 700px) {
+  /* line 1152, csspreprocessor.sass */
+  .tile-grid .tile {
+    margin-bottom: 25px; } }
+@media(max-width: 600px) {
+  /* line 1157, csspreprocessor.sass */
+  .tile-grid .tile {
+    width: 48%; } }
+/* line 1163, csspreprocessor.sass */
+.products-grid .tile {
+  text-align: center; }
+/* line 1165, csspreprocessor.sass */
+.products-grid .product-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300; }
+/* line 1169, csspreprocessor.sass */
+.products-grid .price {
+  color: #c34762;
+  font-weight: 300; }
+
+/* line 1175, csspreprocessor.sass */
+.img-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
+  /* line 1180, csspreprocessor.sass */
+  .img-row .img-box {
+    width: 25%; }
+    /* line 1182, csspreprocessor.sass */
+    .img-row .img-box img {
+      width: 100%; }
+
+@media(max-width: 500px) {
+  /* line 1185, csspreprocessor.sass */
+  .img-row {
+    margin-bottom: 0; }
+    /* line 1187, csspreprocessor.sass */
+    .img-row .img-box {
+      width: 50%;
+      margin-bottom: 1rem; } }
+/* line 1193, csspreprocessor.sass */
+.icons-row {
+  display: flex;
+  justify-content: space-between; }
+  /* line 1196, csspreprocessor.sass */
+  .icons-row .box {
+    text-align: center;
+    width: 33%; }
+    /* line 1199, csspreprocessor.sass */
+    .icons-row .box:first-child {
+      padding-right: 2rem; }
+    /* line 1201, csspreprocessor.sass */
+    .icons-row .box:last-child {
+      padding-left: 2rem; }
+  /* line 1203, csspreprocessor.sass */
+  .icons-row h2 {
+    margin-bottom: 0.25em; }
+
+@media(max-width: 1000px) {
+  /* line 1207, csspreprocessor.sass */
+  .icons-row h2 {
+    font-size: 1.5rem; }
+  /* line 1209, csspreprocessor.sass */
+  .icons-row p {
+    font-size: 0.8rem; }
+  /* line 1212, csspreprocessor.sass */
+  .icons-row .box:first-child {
+    padding-right: 1em; }
+  /* line 1214, csspreprocessor.sass */
+  .icons-row .box:last-child {
+    padding-left: 1em; } }
+@media(max-width: 600px) {
+  /* line 1217, csspreprocessor.sass */
+  .icons-row {
+    flex-wrap: wrap; }
+    /* line 1219, csspreprocessor.sass */
+    .icons-row h2 {
+      font-size: 1.75rem; }
+    /* line 1221, csspreprocessor.sass */
+    .icons-row p {
+      font-size: 1rem; }
+    /* line 1223, csspreprocessor.sass */
+    .icons-row .box {
+      width: 75%;
+      margin: 0 auto 1rem auto; }
+      /* line 1226, csspreprocessor.sass */
+      .icons-row .box:first-child {
+        padding: 0; }
+      /* line 1228, csspreprocessor.sass */
+      .icons-row .box:last-child {
+        padding: 0; } }
+@media(max-width: 500px) {
+  /* line 1231, csspreprocessor.sass */
+  .icons-row .box {
+    width: 85%; } }
+@media(max-width: 400px) {
+  /* line 1235, csspreprocessor.sass */
+  .icons-row .box {
+    width: 100%; } }
+/* line 1240, csspreprocessor.sass */
+.featured-text {
+  background: #808991;
+  color: #ffffff;
+  text-align: center; }
+  /* line 1244, csspreprocessor.sass */
+  .featured-text h3 {
+    margin-bottom: 0.25em; }
+  /* line 1246, csspreprocessor.sass */
+  .featured-text a {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 #808991;
+    transition: all 0.2s ease-in-out; }
+    /* line 1252, csspreprocessor.sass */
+    .featured-text a:hover {
+      transition: all 0.2s ease-in-out; }
+
+/* line 1260, csspreprocessor.sass */
+.timeline .item {
+  margin-bottom: 2rem;
+  overflow: hidden; }
+  /* line 1263, csspreprocessor.sass */
+  .timeline .item:last-child {
+    margin-bottom: 0; }
+/* line 1266, csspreprocessor.sass */
+.timeline h1 {
+  margin: 0;
+  text-align: right;
+  margin-right: 1em;
+  font-weight: 400; }
+/* line 1271, csspreprocessor.sass */
+.timeline .year {
+  width: 22%; }
+/* line 1273, csspreprocessor.sass */
+.timeline .content {
+  width: 78%; }
+/* line 1275, csspreprocessor.sass */
+.timeline h2 {
+  border-bottom: 1px solid #c34762;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 300; }
+/* line 1280, csspreprocessor.sass */
+.timeline .text-wrapper, .timeline .img-wrapper {
+  float: left; }
+/* line 1282, csspreprocessor.sass */
+.timeline .text-wrapper {
+  width: 60%; }
+/* line 1284, csspreprocessor.sass */
+.timeline p {
+  padding-right: 2rem; }
+/* line 1286, csspreprocessor.sass */
+.timeline .img-wrapper {
+  width: 40%; }
+/* line 1288, csspreprocessor.sass */
+.timeline img {
+  width: 100%; }
+
+@media(min-width: 1201px) {
+  /* line 1293, csspreprocessor.sass */
+  .timeline .text-wrapper {
+    width: 70%; }
+  /* line 1295, csspreprocessor.sass */
+  .timeline .img-wrapper {
+    width: 30%; } }
+@media(max-width: 1200px) {
+  /* line 1300, csspreprocessor.sass */
+  .timeline .year {
+    width: 25%; }
+  /* line 1302, csspreprocessor.sass */
+  .timeline h1 {
+    font-size: 1.75rem; }
+  /* line 1304, csspreprocessor.sass */
+  .timeline .content {
+    width: 75%; } }
+@media(max-width: 1000px) {
+  /* line 1309, csspreprocessor.sass */
+  .timeline .year {
+    width: 100%; }
+  /* line 1311, csspreprocessor.sass */
+  .timeline h1 {
+    font-size: 2rem;
+    text-align: left; }
+  /* line 1314, csspreprocessor.sass */
+  .timeline .content {
+    width: 100%; } }
+@media(max-width: 800px) {
+  /* line 1319, csspreprocessor.sass */
+  .timeline .content .text-wrapper {
+    width: 100%; }
+  /* line 1321, csspreprocessor.sass */
+  .timeline .img-wrapper {
+    display: none; }
+  /* line 1323, csspreprocessor.sass */
+  .timeline p {
+    padding-right: 0; } }
+/* line 1333, csspreprocessor.sass */
+#home .text-left-img-right .content-box .img-box {
+  top: -5em; }
+
+@media(max-width: 1000px) {
+  /* line 1336, csspreprocessor.sass */
+  #home .text-left-img-right .content-box .img-box {
+    top: 1.5em;
+    right: -2em; } }
+/* line 1351, csspreprocessor.sass */
+#tilbehør .text-left-img-right .content-box .img-box {
+  top: -5em; }
+
+@media(max-width: 1000px) {
+  /* line 1354, csspreprocessor.sass */
+  #tilbehør .text-left-img-right .content-box .img-box {
+    top: 1.5em;
+    right: -2em; } }

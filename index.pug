@@ -9,47 +9,105 @@ html(lang="no")
 		// Styling
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
 		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		// bxSlider
+		script(src="js/bxslider/jquery.bxslider.min.js")
+		link(href="js/bxslider/jquery.bxslider.css", rel="stylesheet")
 		// JS
 		script(src="js/silseth.js")
-		// SlidesJS
-		script(src="js/jquery.slides.min.js")
+		// Mmenu 
+		link(rel="stylesheet", href="lib/js/mmenu/css/jquery.mmenu.css", media="screen and (max-width: 700px)")
+		link(rel="stylesheet", href="lib/js/mmenu/extensions/positioning/jquery.mmenu.positioning.css", media="screen and (max-width: 700px)")
+		script(src="lib/js/mmenu/js/jquery.mmenu.min.js")
 		//- // Typekit
-		//- <link rel="stylesheet" href="https://use.typekit.net/oik1thr.css">
+		<script src="https://use.typekit.net/mrh3ute.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 			
-	body
+	body#home
+		include includes/menu
+		
+		section.white-transparent#home_slideshow
+			.inner
+				.content-wrapper
+					.slideshow
+						.slide
+							.two-boxes
+								.box
+									h2 Visuell kunst i glass
+									p Vår lokale glasskunstner Sissel Solli Eide samarbeider med oss, 
+										| og lager kunst i glass som blir innfelt i minnestenene. Kombinasjonen 
+										| glass/kunst polert og upolert stein gir et unikt og kraftfullt utrykk. 
+								.box
+									img(src="img/dummystein_1.png")
+										
+						
+						.slide
+							.two-boxes
+								.box
+									h2 Tittel her...
+									p Do elit non irure ita hic summis doctrina quamquam se nulla qui si minim 
+										| arbitror ab illum voluptate ea exquisitaque ubi aliquip tamen probant nostrud, 
+										| ab quid quorum non quibusdam o non ne concursionibus, nescius culpa pariatur.
+								.box
+									img(src="img/dummystein_2.jpg")
+		
 		section
 			.inner
 				.content-wrapper
-					//- .slideshow
-					//- 	img(src="img/001.jpg")
-					//- 	img(src="img/002.jpg")
-					//- 	img(src="img/003.jpg")
-					//- 	a(href="#").slidesjs-previous.slidesjs-navigation back
-					//- 	a(href="#").slidesjs-next.slidesjs-navigation next 
-					//- 			
-							
-					.three-boxes
+					.two-boxes
 						.box
-							.slideshow
-								img(src="img/001.jpg")
-								img(src="img/002.jpg")
-								img(src="img/003.jpg")
-								a(href="#").slidesjs-previous.slidesjs-navigation back
-								a(href="#").slidesjs-next.slidesjs-navigation next 
+							h2 Design din egen minnesten
+							p Med vår nye stenbygger kan du prøve deg fram med ulike steintyper, dekorelement og 
+								| skrifttyper på noen utvalgte stener.
+							a(href="http://stenbygger.silseth-sten.no/").btn Design
 						.box
-							.slideshow
-								img(src="img/001.jpg")
-								img(src="img/002.jpg")
-								img(src="img/003.jpg")
-								a(href="#").slidesjs-previous.slidesjs-navigation back
-								a(href="#").slidesjs-next.slidesjs-navigation next 
+							img(src="img/stenbygger.png")
+		section
+			.inner
+				.content-wrapper
+					h2 Minnestener 
+					.grid
 						.box
-							.slideshow
-								img(src="img/001.jpg")
-								img(src="img/002.jpg")
-								img(src="img/003.jpg")
-								a(href="#").slidesjs-previous.slidesjs-navigation back
-								a(href="#").slidesjs-next.slidesjs-navigation next 
-						
+							img(src="img/003.jpg")
+							p Pris fra 20.200,-
+						.box
+							img(src="img/002.jpg")
+							p Pris fra 20.200,-
+						.box
+							img(src="img/001.jpg")
+							p Pris fra 20.200,-
+						.box
+							img(src="img/002.jpg")
+							p Pris fra 20.200,-
+						.box
+							img(src="img/003.jpg")
+							p Pris fra 20.200,-
+						.box
+							img(src="img/001.jpg")
+							p Pris fra 20.200,-
+						//- .box
+						//- 	img(src="img/001.jpg")
+						//- 	p Pris fra 20.200,-
+						//- .box
+						//- 	img(src="img/002.jpg")
+						//- 	p Pris fra 20.200,-
+						//- .box
+						//- 	img(src="img/003.jpg")
+						//- 	p Pris fra 20.200,-
+						//- .box
+						//- 	img(src="img/001.jpg")
+						//- 	p Pris fra 20.200,-
+					a(href="#") Se alle minnestener 
 
-			
+
+		section
+			.inner
+				.content-wrapper
+					.two-boxes
+						.box 
+							h2 Rett fra norsk natur - våre unike natursteiner
+							// Link til punktet "naturstein" på undersiden minnestener
+							a(href="#").btn Les mer
+						.box
+							.slideshow
+								img(src="img/001.jpg")
+								img(src="img/002.jpg")
