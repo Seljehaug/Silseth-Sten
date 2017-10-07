@@ -8,7 +8,9 @@
 
 body {
   font-size: 100%;
-  background: url(../img/background_top.jpg) top left no-repeat; }
+  background: url(../img/background_top.jpg) top left no-repeat;
+  background-size: contain;
+  background-color: #ffffff; }
 
 h1 {
   font-size: 3.5rem;
@@ -40,19 +42,33 @@ p {
 
 .btn {
   background: #bfbfbf;
+  color: #000000;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
   padding: 0.4em 1.2em;
   text-decoration: none;
-  border-radius: 8px; }
+  border: 1px solid transparent;
+  border-radius: 8px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer; }
+  .btn:hover, .btn:focus {
+    outline: none;
+    border: 1px solid #4f4e4e;
+    background: #4f4e4e;
+    color: #ffffff;
+    -webkit-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
 
 @media (max-width: 750px) {
   h1 {
     font-size: 2.8rem; }
   h2 {
     font-size: 1.8rem;
-    text-align: center; }
+    line-height: 1.2em; }
   h3 {
     font-size: 1.2rem; }
   h4 {
@@ -61,6 +77,12 @@ p {
     font-size: 1rem; }
   .btn {
     font-size: 1rem; } }
+
+.bold {
+  font-weight: 700; }
+
+.center {
+  text-align: center; }
 
 img {
   width: 100%; }
@@ -86,12 +108,6 @@ section {
 section:first-of-type {
   margin-top: 100px; }
 
-.center {
-  text-align: center; }
-
-.bold {
-  font-weight: 600; }
-
 .white-transparent {
   background: rgba(255, 255, 255, 0.6); }
 
@@ -108,6 +124,15 @@ section:first-of-type {
   background-image: url(../img/icons/silseth_sten.svg);
   display: inline-block;
   font-size: 100px; }
+
+.logo-norsk-berg {
+  background-image: url(../img/icons/norskberg.svg); }
+
+.logo-mestermerket {
+  background-image: url(../img/icons/mestermerket.svg); }
+
+.logo-norsk-kvalitet {
+  background-image: url(../img/icons/norsk_kvalitet.svg); }
 
 #mobilemenu_show {
   display: none; }
@@ -157,7 +182,12 @@ section:first-of-type {
       display: inline; }
       #menu .lower li a {
         text-transform: uppercase;
-        font-weight: 700; }
+        font-weight: 700;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em; }
+        #menu .lower li a:hover {
+          border-bottom: 1px solid #4f4e4e;
+          border-top: 1px solid #4f4e4e; }
 
 #menu.large {
   height: 120px;
@@ -179,22 +209,16 @@ section:first-of-type {
     #menu.large ul li a {
       font-size: 1.1rem;
       margin-left: 20px;
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
+      -webkit-transition: font-size 0.3s ease-in-out;
+      -o-transition: font-size 0.3s ease-in-out;
+      transition: font-size 0.3s ease-in-out; }
 
 @media (max-width: 1050px) {
   #menu.large .upper a, #menu.large .upper span {
-    font-size: 0.9rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    font-size: 0.9rem; }
   #menu.large ul li a {
     font-size: 1rem;
-    margin-left: 10px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; } }
+    margin-left: 10px; } }
 
 @media (max-width: 900px) {
   #menu.large {
@@ -441,7 +465,9 @@ section:first-of-type {
     margin-bottom: 2rem;
     width: 100%; }
     .slideshow .two-boxes .box:first-child h2 {
-      text-align: center; }
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 1rem; }
     .slideshow .two-boxes .box:first-child p {
       width: 80%;
       margin: 0 auto; }
@@ -457,3 +483,160 @@ section:first-of-type {
   .slideshow .two-boxes .box:first-child p {
     width: 75%;
     margin: 0 auto; } }
+
+.footer {
+  background: url(../img/background_top.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-bottom: none; }
+  .footer .content-wrapper {
+    padding-bottom: 2rem; }
+  .footer .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5); }
+  .footer .info-bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .footer .info-bar .info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 70%; }
+      .footer .info-bar .info .item {
+        margin-right: 15px; }
+      .footer .info-bar .info .phone .bold, .footer .info-bar .info .email .bold {
+        margin-bottom: 3px; }
+    .footer .info-bar p, .footer .info-bar a {
+      font-size: 1rem;
+      text-decoration: none; }
+    .footer .info-bar .logos {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 30%;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      margin-top: -5px; }
+  .footer .logos .logo-wrapper {
+    height: 50px;
+    margin-left: 5px; }
+    .footer .logos .logo-wrapper .logo {
+      height: 50px; }
+  .footer .logo-norsk-berg {
+    margin-left: 0; }
+  .footer .logo-norsk-kvalitet {
+    width: 100px; }
+  .footer form {
+    margin-top: 1.5rem; }
+  .footer input[type="text"], .footer input[type="tel"], .footer input[type="email"], .footer textarea {
+    border-radius: 8px;
+    padding: 0.5rem;
+    border: 1px solid rgba(212, 212, 212, 0.9);
+    font-size: 1.2rem; }
+    .footer input[type="text"]:focus, .footer input[type="tel"]:focus, .footer input[type="email"]:focus, .footer textarea:focus {
+      outline: none;
+      border: 1px solid #4f4e4e; }
+  .footer textarea {
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    margin-top: 1rem; }
+  .footer .input-fields {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .footer .input-fields .required {
+      width: 32%; }
+      .footer .input-fields .required input {
+        width: 100%; }
+  .footer input[type="submit"] {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1rem; }
+  .footer .fb_invalid input, .footer .fb_invalid textarea {
+    border: 1px solid red; }
+  .footer .copyright {
+    margin-top: 2rem;
+    text-align: center; }
+    .footer .copyright a {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #4f4e4e;
+      text-decoration: none;
+      padding: 0.5em; }
+      .footer .copyright a:hover {
+        border-bottom: 1px solid #4f4e4e;
+        border-top: 1px solid #4f4e4e; }
+
+@media (max-width: 900px) {
+  .footer .info-bar .info {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .footer .info-bar .info .item {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 1rem; }
+  .footer .info-bar .logos {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+
+@media (max-width: 700px) {
+  .footer .info-bar .logos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: -35px; }
+    .footer .info-bar .logos .logo-wrapper {
+      margin-bottom: 10px; }
+  .footer .input-fields .required {
+    width: 48%; }
+    .footer .input-fields .required .phone {
+      margin-top: 1rem; } }
+
+@media (max-width: 500px) {
+  .footer .info-bar p, .footer .info-bar a {
+    font-size: 0.8rem; }
+  .footer .info-bar .info .item {
+    width: 45%; }
+  .footer .info-bar .phone, .footer .info-bar .email {
+    margin-left: 10%; }
+  .footer .logos {
+    margin-top: -20px; }
+    .footer .logos .logo-wrapper {
+      height: 35px; }
+      .footer .logos .logo-wrapper .logo {
+        height: 35px; }
+  .footer .input-fields .required {
+    width: 100%;
+    margin-top: 1rem; }
+    .footer .input-fields .required .phone {
+      margin-top: 0; } }

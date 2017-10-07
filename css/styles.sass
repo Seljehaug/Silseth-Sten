@@ -10,9 +10,8 @@
 body
 	font-size: 100%
 	background: url(../img/background_top.jpg) top left no-repeat
-	// , linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0))
-
-	// background-color: $white
+	background-size: contain
+	background-color: $white
 	// background: url("../img/001.jpg")
 
 h1
@@ -46,19 +45,32 @@ a:hover
 
 .btn
 	background: $grey
+	color: $black
 	text-transform: uppercase
 	font-size: 1rem
 	font-weight: 700
 	padding: 0.4em 1.2em
 	text-decoration: none
+	border: 1px solid transparent
 	border-radius: $radius
+	transition: background 0.3s ease-in-out
+	// transition: color 0.3s ease-in-out
+	cursor: pointer
+	&:hover, &:focus
+		outline: none
+		border: 1px solid $grey-dark
+		background: $grey-dark
+		color: $white
+		transition: background 0.3s ease-in-out
+		// transition: color 0.3s ease-in-out
 
 @media(max-width: 750px)
 	h1
 		font-size: 2.8rem
 	h2
 		font-size: 1.8rem
-		text-align: center
+		line-height: 1.2em
+		// text-align: center
 	h3
 		font-size: 1.2rem
 	h4
@@ -67,6 +79,12 @@ a:hover
 		font-size: 1rem
 	.btn
 		font-size: 1rem
+
+.bold
+	font-weight: 700
+
+.center
+	text-align: center
 
 img
 	width: 100%
@@ -91,11 +109,6 @@ section
 section:first-of-type
 	margin-top: 100px
 
-.center
-	text-align: center
-.bold
-	font-weight: 600
-
 .white-transparent
 	background: rgba(255, 255, 255, 0.6)
 
@@ -113,6 +126,15 @@ section:first-of-type
 	background-image: url(../img/icons/silseth_sten.svg)
 	display: inline-block
 	font-size: 100px
+
+.logo-norsk-berg
+	background-image: url(../img/icons/norskberg.svg)
+
+.logo-mestermerket
+	background-image: url(../img/icons/mestermerket.svg)
+
+.logo-norsk-kvalitet
+	background-image: url(../img/icons/norsk_kvalitet.svg)
 
 // End of icons and logos
 
@@ -151,6 +173,11 @@ section:first-of-type
 			a
 				text-transform: uppercase
 				font-weight: 700
+				padding-top: 0.5em
+				padding-bottom: 0.5em
+				&:hover
+					border-bottom: 1px solid $grey-dark
+					border-top: 1px solid $grey-dark
 
 #menu.large
 	height: 120px
@@ -166,18 +193,20 @@ section:first-of-type
 		li a
 			font-size: 1.1rem
 			margin-left: 20px
-			transition: all 0.3s ease-in-out
+			// TODO: FIX GLITCHY BORDER TRANSITION
+			// transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 
 @media(max-width: 1050px)
 	#menu.large
 		.upper
 			a,span
 				font-size: 0.9rem
-				transition: all 0.3s ease-in-out
+				// transition: all 0.3s ease-in-out
 		ul li a
 			font-size: 1rem
 			margin-left: 10px
-			transition: all 0.3s ease-in-out
+			// transition: all 0.3s ease-in-out
 		.logo-silseth-sten
 			// font-size: 70px
 
@@ -400,7 +429,10 @@ section:first-of-type
 			margin-bottom: 2rem
 			width: 100%
 			h2
-				text-align: center
+				// text-align: center
+				width: 80%
+				margin: 0 auto
+				margin-bottom: 1rem
 			p
 				width: 80%
 				margin: 0 auto
@@ -444,3 +476,148 @@ section:first-of-type
 
 // .bx-clone
 // 	display: none
+
+.footer
+	background: url(../img/background_top.jpg) no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	border-bottom: none
+	.content-wrapper
+		padding-bottom: 2rem
+	.overlay
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(255, 255, 255, 0.5)
+	.info-bar
+		display: flex
+		justify-content: space-between
+		.info
+			display: flex
+			width: 70%
+			// background: green
+			.item
+				margin-right: 15px
+			.phone .bold, .email .bold
+				margin-bottom: 3px
+		p,a
+			font-size: 1rem
+			text-decoration: none
+		.logos
+			display: flex
+			width: 30%
+			justify-content: flex-end
+			// background: red
+			margin-top: -5px
+	.logos
+		.logo-wrapper
+			height: 50px
+			margin-left: 5px
+			// background: yellow
+			.logo
+				// margin-left: 25px
+				height: 50px
+	.logo-norsk-berg
+		margin-left: 0
+	.logo-norsk-kvalitet
+		width: 100px
+
+	form
+		margin-top: 1.5rem
+	input[type="text"], input[type="tel"], input[type="email"], textarea
+		// margin-bottom: 20px
+		border-radius: $radius
+		padding: 0.5rem
+		border: 1px solid $grey-transparent
+		font-size: 1.2rem
+		&:focus
+			outline: none
+			border: 1px solid $grey-dark
+	textarea
+		width: 100%
+		min-height: 150px
+		height: 100%
+		margin-top: 1rem
+
+	.input-fields
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.required
+			width: 32%
+			input
+				width: 100%
+
+	input[type="submit"]
+		margin-top: 1rem
+		width: 100%
+		font-size: 1rem
+
+	.fb_invalid
+		input, textarea
+			border: 1px solid red
+
+	.copyright
+		margin-top: 2rem
+		text-align: center
+		a
+			text-transform: uppercase
+			font-size: 0.8rem
+			font-weight: 700
+			color: $grey-dark
+			text-decoration: none
+			padding: 0.5em
+			&:hover
+				border-bottom: 1px solid $grey-dark
+				border-top: 1px solid $grey-dark
+
+@media(max-width: 900px)
+	.footer
+		.info-bar
+			.info
+				flex-wrap: wrap
+				.item
+					width: 50%
+					margin-right: 0
+					margin-bottom: 1rem
+			.logos
+				align-items: center
+				.logo-wrapper
+
+@media(max-width: 700px)
+	.footer
+		.info-bar
+			.logos
+				flex-direction: column
+				margin-top: -35px
+				.logo-wrapper
+					margin-bottom: 10px
+		.input-fields
+			.required
+				width: 48%
+				.phone
+					margin-top: 1rem
+
+@media(max-width: 500px)
+	.footer
+		.info-bar
+			p,a
+				font-size: 0.8rem
+			.info .item
+				width: 45%
+			.phone, .email
+				margin-left: 10%
+		.logos
+			margin-top: -20px
+			.logo-wrapper
+				height: 35px
+				.logo
+					height: 35px
+		.input-fields .required
+			width: 100%
+			margin-top: 1rem
+			.phone
+				margin-top: 0

@@ -1,0 +1,45 @@
+section.footer
+	.overlay
+	.inner
+		.content-wrapper
+			h2 Kontakt oss 
+			.logo-wrapper
+				a.icon.logo-silseth-sten(href='/') Logo for Silseth Sten
+			
+			.info-bar
+				.info
+					.item
+						p.bold Adresse
+						p Steinhuggervegen 52, 6490 Eide 
+					.item.phone
+						p.bold Telefon
+						a(href="tel:71299300") 71 29 93 00
+					.item
+						p.bold Faks 
+						p 71 29 93 01
+					.item.email
+						p.bold E-post 
+						a(href="mailto:post@silseth-sten.no") post@silseth-sten.no
+				.logos
+					.logo-wrapper
+						a(href="#").icon.logo.logo-norsk-berg Logo for Norsk bergindustri 
+					.logo-wrapper
+						a(href="#").icon.logo.logo-mestermerket Logo for Mestermerket
+					.logo-wrapper
+						a(href="#").icon.logo.logo-norsk-kvalitet Logo for Norsk kvalitet
+							
+			form(method="post", action="#", enctype="multipart/form-data").validate
+				.input-fields
+					.required
+						input.name(type="text" placeholder="Ditt navn")
+					.required
+						input.email(type="email" placeholder="E-post")
+					.required
+						input.phone(type="tel" placeholder="Telefon")
+				.required
+					textarea(placeholder="Behov")
+				input(type="submit" value="Send inn").btn
+			
+			.copyright 
+				a(href="https://www.ekh.no") Design og cms av EKH Grafisk
+		
