@@ -25,12 +25,12 @@ html(lang="no")
 	body#home
 		include includes/menu
 		
-		section.white-transparent#home_slideshow
+		section.white-transparent
 			.inner
 				.content-wrapper
 					.slideshow
 						.slide
-							.two-boxes
+							.two-boxes.align-center
 								.box
 									h2 Visuell kunst i glass
 									p Vår lokale glasskunstner Sissel Solli Eide samarbeider med oss, 
@@ -41,7 +41,7 @@ html(lang="no")
 										
 						
 						.slide
-							.two-boxes
+							.two-boxes.align-center
 								.box
 									h2 Tittel her...
 									p Do elit non irure ita hic summis doctrina quamquam se nulla qui si minim 
@@ -67,47 +67,68 @@ html(lang="no")
 					h2 Minnestener 
 					.grid
 						.box
-							img(src="img/003.jpg")
+							img(src="img/grid_1.png")
 							p Pris fra 20.200,-
+							span.number 81
 						.box
-							img(src="img/002.jpg")
+							img(src="img/grid_2.png")
 							p Pris fra 20.200,-
+							span.number 78
 						.box
-							img(src="img/001.jpg")
+							img(src="img/grid_3.png")
 							p Pris fra 20.200,-
+							span.number 80
 						.box
-							img(src="img/002.jpg")
+							img(src="img/grid_4.png")
 							p Pris fra 20.200,-
+							span.number 77
 						.box
-							img(src="img/003.jpg")
+							img(src="img/grid_5.png")
 							p Pris fra 20.200,-
+							span.number 82
 						.box
-							img(src="img/001.jpg")
+							img(src="img/grid_6.png")
 							p Pris fra 20.200,-
-						//- .box
-						//- 	img(src="img/001.jpg")
-						//- 	p Pris fra 20.200,-
-						//- .box
-						//- 	img(src="img/002.jpg")
-						//- 	p Pris fra 20.200,-
-						//- .box
-						//- 	img(src="img/003.jpg")
-						//- 	p Pris fra 20.200,-
-						//- .box
-						//- 	img(src="img/001.jpg")
-						//- 	p Pris fra 20.200,-
-					a(href="#") Se alle minnestener 
+							span.number 105
+					
+						a.btn(href="#") Se alle minnestener 
+							.overlay
 
 
 		section
 			.inner
 				.content-wrapper
-					.two-boxes
+					.two-boxes.align-center
 						.box 
-							h2 Rett fra norsk natur - våre unike natursteiner
+							h2 Rett fra norsk natur <br> - våre unike natursteiner
 							// Link til punktet "naturstein" på undersiden minnestener
 							a(href="#").btn Les mer
 						.box
 							.slideshow
-								img(src="img/001.jpg")
-								img(src="img/002.jpg")
+								.slide
+									img(src="img/stein.jpg")
+								.slide 
+									img(src="img/grid_1.png")
+								.slide
+									img(src="img/grid_2.png")
+
+		section
+			.inner
+				.content-wrapper
+					.two-boxes.align-center
+						.box 
+							h2 Bygningssten
+							p Vårt firma har levert bygningsstein til mange kjente bygninger i Sverige, 
+								| Finland, og Norge. Bygningssteinen brukes til fasadestein, kanstein, trapper 
+								| avsatser, gulvflis, peiser fonteneanlegg og mye mer
+							a(href="#").btn Les mer
+						.box
+							.slideshow
+								.slide
+									img(src="img/bygningssten.jpg")
+								.slide 
+									img(src="img/grid_1.png")
+								.slide
+									img(src="img/grid_2.png")
+		
+		include includes/contact_form
