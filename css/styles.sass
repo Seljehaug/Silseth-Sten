@@ -36,12 +36,14 @@ h4
 // 	margin-bottom: 0.2em
 p,a
 	font-size: 1.2rem
-
-p
+	text-decoration: none
 	line-height: 1.4em
 
+a
+	padding: 0.1em 0
+
 a:hover
-	// color: $dark-grey
+	border-bottom: 1px solid
 
 .btn
 	background: $grey
@@ -83,6 +85,9 @@ a:hover
 .bold
 	font-weight: 700
 
+.semi-bold
+	font-weight: 600
+
 .center
 	text-align: center
 
@@ -112,6 +117,9 @@ section:first-of-type
 .white-transparent
 	background: rgba(255, 255, 255, 0.6)
 
+.content-below
+	margin-top: 1rem
+
 // --- Icons and logos ---
 .icon
 	display: block
@@ -121,6 +129,8 @@ section:first-of-type
 	background-position: center center
 	background-repeat: no-repeat
 	position: relative
+	&:hover
+		border-bottom: none
 
 .logo-silseth-sten
 	background-image: url(../img/icons/silseth_sten.svg)
@@ -155,6 +165,7 @@ section:first-of-type
 	a
 		text-decoration: none
 		font-size: 0.9rem
+		line-height: 1em
 	span
 		margin-left: 5px
 		margin-right: 5px
@@ -162,7 +173,7 @@ section:first-of-type
 	.upper
 		display: flex
 		flex-direction: row-reverse
-		transition: all 0.3s ease-in-out
+		// transition: all 0.3s ease-in-out
 
 	.lower
 		display: flex
@@ -181,15 +192,15 @@ section:first-of-type
 
 #menu.large
 	height: 120px
-	transition: all 0.3s ease-in-out
+	transition: height 0.3s ease-in-out
 	.lower
 		margin-top: -25px
 	.logo-silseth-sten
 		font-size: 100px
-		transition: all 0.3s ease-in-out
+		transition: font-size 0.3s ease-in-out
 	ul
 		margin-top: 20px
-		transition: all 0.3s ease-in-out
+		// transition: all 0.3s ease-in-out
 		li a
 			font-size: 1.1rem
 			margin-left: 20px
@@ -216,12 +227,13 @@ section:first-of-type
 		.upper
 			a,span
 				font-size: 0.8rem
-				transition: all 0.3s ease-in-out
+				transition: font-size 0.3s ease-in-out
 		ul li a
 			font-size: 0.9rem
-			transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 		.logo-silseth-sten
 			font-size: 80px
+			transition: font-size 0.3s ease-in-out
 
 @media(max-width: 750px)
 	#menu.large
@@ -229,44 +241,46 @@ section:first-of-type
 		ul li a
 			font-size: 0.9rem
 			margin-left: 5px
-			transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 		.logo-silseth-sten
 			font-size: 75px
+			transition: font-size 0.3s ease-in-out
 
 #menu.small
 	height: 70px
-	transition: all 0.3s ease-in-out
+	transition: height 0.3s ease-in-out
 	.upper
 		display: none
-		transition: all 0.3s ease-in-out
+		// transition: all 0.3s ease-in-out
 	.lower
 		margin-top: -20px
-		transition: all 0.3s ease-in-out
+		// transition: all 0.3s ease-in-out
 	.logo-silseth-sten
 		font-size: 70px
-		transition: all 0.3s ease-in-out
+		transition: font-size 0.3s ease-in-out
 
 	ul
 		margin-top: 10px
-		transition: all 0.3s ease-in-out
+		// transition: all 0.3s ease-in-out
 		li a
 			font-size: 1rem
 			margin-left: 20px
-			transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 
 @media(max-width: 900px)
 	#menu.small
 		ul li a
 			font-size: 0.9rem
-			transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 
 @media(max-width: 800px)
 	#menu.small
 		ul li a
 			font-size: 0.8rem
-			transition: all 0.3s ease-in-out
+			transition: font-size 0.3s ease-in-out
 		.logo-silseth-sten
 			font-size: 65px
+			transition: font-size 0.3s ease-in-out
 
 @media(max-width: 700px)
 	section:first-of-type
@@ -313,6 +327,10 @@ section:first-of-type
 		margin-bottom: 0
 .two-boxes.align-center
 	align-items: center
+
+.two-boxes.content-below
+	margin-top: 2rem
+
 @media(max-width: 750px)
 	.two-boxes
 		flex-direction: column
@@ -399,11 +417,6 @@ section:first-of-type
 		.box
 			width: 45%
 
-// @media(max-width: 400px)
-// 	.grid
-// 		.box
-// 			width: 100%
-
 // end of grid
 
 // --- slideshow ---
@@ -418,6 +431,7 @@ section:first-of-type
 			padding-left: 100px
 		.box:last-child
 			padding-right: 100px
+
 @media(max-width: 750px)
 	.slideshow .two-boxes
 		.box
@@ -449,33 +463,8 @@ section:first-of-type
 		.box:first-child p
 			width: 75%
 			margin: 0 auto
-
-	// .bx-wrapper .bx-controls-direction a
-		// z-index: 10
-	// .bx-controls-direction .bx-prev
-		// transform: rotate(180deg)
 // end of slideshow
 
-// #home_slideshow
-// 	.two-boxes
-// 		align-items: center
-//
-
-
-
-// .test
-// 	.slide
-// 		// height: 400px
-// 		min-width: 1px
-// 		min-height: 1px
-// 		img
-// 			// height: 400px
-// 			width: auto
-// 			// width: auto
-// 			margin: 0 auto
-
-// .bx-clone
-// 	display: none
 
 .footer
 	background: url(../img/background_top.jpg) no-repeat
@@ -621,3 +610,204 @@ section:first-of-type
 			margin-top: 1rem
 			.phone
 				margin-top: 0
+
+
+// ---- PAGE SPEFICIC STYLES ----
+// #minnestener
+// 	.two-boxes.content-below
+// 		margin-top: 2rem
+
+
+// --- ISOTOPE STYLES  ---
+#isotope-grid
+	.info
+		display: none
+	.grid-item
+		padding: 1rem
+		width: 25%
+		// border: 1px solid black
+		// transition: width 0.3s ease-in-out
+	.large
+		width: 50%
+		// transition: width 0.3s ease-in-out
+		// border: 1px solid black
+		background: #f2f2f2
+		// .info
+		// 	img
+		// 		width: 50%
+		// 		float: left
+
+
+#filter-wrapper
+	#filter
+		display: flex
+		li
+			display: inline
+			margin-right: 20px
+
+
+#stones
+	width: 100%
+	a
+		display: block
+		position: relative
+		width: 100%
+		height: 100%
+		transition: none
+
+	.refitem
+		position: relative
+		padding: 2rem
+		width: 300px
+		height: 300px
+		overflow: hidden
+		a:hover
+			border-bottom: none
+		.price p
+			text-align: center
+			font-size: 0.9rem
+			font-weight: 700
+		.number
+			position: absolute
+			top: 10%
+			right: 5%
+			background: $grey-dark
+			border-radius: 100%
+			p
+				font-weight: 700
+				font-size: 0.7rem
+				padding: 1em
+				color: $white
+
+
+	.bkg-img
+		width: 100%
+		height: 100%
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-size: contain
+
+	.overlay
+		position: absolute
+		display: block
+		bottom: 0
+		left: 0
+		right: 0
+		top: 0
+		// background-color: rgba(212, 212, 212, 0)
+		background-color: $grey-light
+		opacity: 0
+		-webkit-transition: all 0.3s ease-out 0.1s
+		-moz-transition: all 0.3s ease-out 0.1s
+		-o-transition: all 0.3s ease-out 0.1s
+		-ms-transition: all 0.3s ease-out 0.1s
+		transition: all 0.3s ease-out 0.1s
+
+	.refitem.selected
+		.overlay
+			// background-color: rgba(212, 212, 212, 1)
+			opacity: 1
+		.info
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 1rem
+
+			.txt
+				width: 30%
+				h4, p
+					font-size: 1rem
+				h4
+					font-weight: 700
+				p
+					margin-bottom: 0.2rem
+				.bold
+					margin-top: 0.6rem
+			.img
+				width: 65%
+
+		.price
+			display: none
+
+		.number
+			top: 7%
+			right: 35%
+			p
+				font-size: 1rem
+
+/**** Isotope Filtering ***
+.isotope-item
+	z-index: 2
+
+.isotope-hidden.isotope-item
+	pointer-events: none
+	z-index: 1
+
+/**** Isotope transitions ***
+.isotope
+	-webkit-transition-duration: 0.8s
+	-moz-transition-duration: 0.8s
+	-ms-transition-duration: 0.8s
+	-o-transition-duration: 0.8s
+	transition-duration: 0.8s
+
+	.isotope-item
+		-webkit-transition-duration: 0.8s
+		-moz-transition-duration: 0.8s
+		-ms-transition-duration: 0.8s
+		-o-transition-duration: 0.8s
+		transition-duration: 0.8s
+		-webkit-transition-property: -webkit-transform, opacity
+		-moz-transition-property: -moz-transform, opacity
+		-ms-transition-property: -ms-transform, opacity
+		-o-transition-property: -o-transform, opacity
+		transition-property: transform, opacity
+		-webkit-transition-property: height, width
+		-moz-transition-property: height, width
+		-ms-transition-property: height, width
+		-o-transition-property: height, width
+		transition-property: height, width
+
+	&.no-transition
+		-webkit-transition-duration: 0s
+		-moz-transition-duration: 0s
+		-ms-transition-duration: 0s
+		-o-transition-duration: 0s
+		transition-duration: 0s
+		.isotope-item
+			-webkit-transition-duration: 0s
+			-moz-transition-duration: 0s
+			-ms-transition-duration: 0s
+			-o-transition-duration: 0s
+			transition-duration: 0s
+
+	.isotope-item.no-transition
+		-webkit-transition-duration: 0s
+		-moz-transition-duration: 0s
+		-ms-transition-duration: 0s
+		-o-transition-duration: 0s
+		transition-duration: 0s
+
+
+/**** Isotope filtering ***
+.isotope-item
+	z-index: 2
+
+.isotope-hidden.isotope-item
+	pointer-events: none
+	z-index: 1
+
+@media screen and (max-width: 850px)
+	#stones .refitem
+		.overlay .info
+			padding: 0 15px
+		.txt
+			width: 100%
+		.img
+			display: none

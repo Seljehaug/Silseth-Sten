@@ -1,0 +1,1043 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<title>
+		Referanser - Hamsto
+	</title>
+	<!-- <base href="http://www.hamsto.no/" /> -->
+	<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-11 Ted Kulp. All rights reserved." />
+	<meta name="Author" content="EKH.no" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+	<!-- <link rel="stylesheet" type="text/css" href="http://www.hamsto.no/tmp/cache/stylesheet_combined_72f603e001193f0b21c5daca909bf8be.css" media="all" /> -->
+	<link rel="stylesheet" href="test.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700italic,700,300italic,300' rel='stylesheet' type='text/css'> -->
+	<!-- <link rel="stylesheet" href="/modules/Gallery/templates/css/SlidesJS3.css" type="text/css" media="screen" /> -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/modules/Gallery/templates/slidesjs3/jquery.slides.min.js"></script> -->
+	<!-- jQuery library (served from Google) -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+</head>
+
+<body>
+
+	<div id="site">
+		<div id="content_fullbredde">
+			<div class="inner">
+				<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+				<script type="text/javascript" charset="utf-8">
+					$(function() {
+						var $container = $('#stones'),
+							body = $("html, body");
+						twidth = 300;
+						u = twidth;
+						scrollwindowtoelem = 0;
+						$container.imagesLoaded(function() {
+							reflowonresize();
+							createisotope();
+
+							// Filtering
+							$("#filter a").click(function(e) {
+								e.preventDefault();
+								var filterValue = $(this).attr('data-filter');
+								// filter by attribute value
+								$container.isotope({
+									filter: filterValue
+								});
+								$container.isotope('layout');
+							});
+						});
+
+						$(window).resize(function() {
+							reflowonresize();
+							$container.isotope('destroy');
+							createisotope();
+						});
+						$(".refitem a").click(function(e) {
+							e.preventDefault();
+							$("#stones .selected").removeClass("selected");
+							$(this).parent().addClass("selected");
+							reflowonresize();
+							scrollwindowtoelem = this;
+							$container.isotope('layout', function() {
+								scrollwindowto = parseInt($(scrollwindowtoelem).parent().offset().top - (($(window).height() - $(scrollwindowtoelem).height()) / 2));
+								body.animate({
+									scrollTop: scrollwindowto
+								}, '500', 'swing');
+							});
+
+						});
+
+						function createisotope() {
+							$container.isotope({
+								itemSelector: '.refitem',
+								layoutMode: 'masonry',
+								masonry: {
+									columnWidth: u
+								}
+							});
+						}
+
+						function reflowonresize() {
+							var winwidth = $('#stones-gallery').outerWidth();
+							if (winwidth > 750) {
+								twidth = 300;
+								theight = 250;
+							} else {
+								twidth = 150;
+								theight = 125;
+							}
+							countcols = parseInt(winwidth / twidth);
+							if (countcols > 2) {
+								bigspan = 3;
+							} else {
+								bigspan = countcols;
+							}
+							u = parseInt(winwidth / countcols);
+							$(".refitem").css("width", (u - 5)).css("height", theight);;
+							$(".refitem.selected").css("width", ((u * bigspan) - 5)).css("height", ((theight * 2) + 5));
+						}
+					});
+				</script>
+
+				<div id="filter-wrapper">
+					<ul id="filter">
+						<li><a class="selected" href="#" data-filter="*">Vis alle</a></li>
+						<li><a href="#" data-filter=".cat_personlig">Personlig preg </a></li>
+						<li><a href="#" data-filter=".cat_kunstmalet">Kunstmalet</a></li>
+						<li><a href="#" data-filter=".cat_porselen">Porselen</a></li>
+						<li><a href="#" data-filter=".cat_naturstein">Naturstein</a></li>
+					</ul>
+				</div>
+
+				<div id="stones-gallery">
+					<div id="stones">
+
+						<div class="refitem cat_personlig">
+							<a href="" title="Fiskesperre Driva">
+								<div class="bilde" style="background-image: url('img/grid_1.png')"></div>
+								<div class="overlay">
+									<!-- <h3>Fiskesperre Driva</h3> -->
+									<div class="info">
+										<div class="txt">
+											<h4>Steinsort på bildet</h4>
+											<p>Orion blå</p>
+											<h4>Størrelse på bildet</h4>
+											<p>70x60 cm</p>
+											<h4>Ornament</h4>
+											<p>Nedsenket med hvit lakk</p>
+											<h4>Skrift</h4>
+											<p>Nedsenket med hvit lakk</p>
+											<h4>Forside</h4>
+											<p>Polert med fas</p>
+											<h4>Kanter</h4>
+											<p>Sandblåst</p>
+											<h4>Bakside</h4>
+											<p>Sandblåst</p>
+											<p class="bold">Pris fra 19.800,-</p>
+
+											<!-- <p>
+												<b>Byggherre:</b> Miljødirektoratet<br/> <b>Enterprisekostnad:</b> 45 mill eks mva<br/> <b>Ferdigstillelse:</b> 2017<br/> <b>Vår rolle:</b> Byggeleder<br/> <br/><b>Andre opplysninger:</b><br/>Etablering av fiskesperre inkl. bro i elva Driva
+												i Sunndalen. Grunnarbeider, spunting, betong- og stålarbeider. Fangsthus og kontorbygning. </p> -->
+										</div>
+										<div class="img">
+											<img src="img/grid_2.png">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="refitem cat_personlig">
+							<a href="" title="AMFI - Tilbygg nord">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-fccbe201aa3240d9067e16beefcaa9df')"></div>
+								<div class="overlay">
+									<!-- <h3>AMFI - Tilbygg nord</h3> -->
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI<br/> <b>Areal, ca:</b> 1000<br/> <b>Ferdigstillelse:</b> April 2017<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> PL / Byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet omfatta utvidelse
+												av senteret, teknisk rom på tak, utskifting av ventilasjon og tekniske anlegg, råbygget va totalentreprise, innredning H&M samarbeid mellom Amfi og H&M, resten av innredninga e utvidelse av eksisterende butikker </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-fccbe201aa3240d9067e16beefcaa9df">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem cat_naturstein">
+							<a href="" title="Arena Ulstein">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-6ee7cbf11377aff2e307ba246206702e')"></div>
+								<div class="overlay">
+									<!-- <h3>Arena Ulstein</h3> -->
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Ulstein Eigedomselskap KF<br/> <b>Areal, ca:</b> 7400<br/> <b>Prosjektkostnad:</b> ca 250 mill eks mva<br/> <b>Ferdigstillelse:</b> Februar 2017<br/> <b>Entrepriseform:</b> Delte entrerpiser, Bygningsmessig hovedentreprenør<br/>												<b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Nybygg som inkluderer svømmehall, idrettshall for flerbruk, klatrehall, bibliotek og parkeringskjeller. Plassert sentralt i Ulsteinvik. Utendør arbeider med beplantning,
+												fast belegg og åpent parkeringsareal </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-6ee7cbf11377aff2e307ba246206702e">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Volda Kommune - Øyra Skule">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-d2c9464f8678ccc43614bb2ab892e6d0')"></div>
+								<div class="overlay">
+									<h3>Volda Kommune - Øyra Skule</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Volda Kommune<br/> <b>Areal, ca:</b> 7400<br/> <b>Enterprisekostnad:</b> Ca 151 mill NOK <br/> <b>Prosjektkostnad:</b> Ca 204 mill NOK<br/> <b>Ferdigstillelse:</b> Juni 2017<br/> <b>Entrepriseform:</b> Totalentreprise<br/>												<b>Vår rolle:</b> Byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet starter i august 2015. Veidekke er entreprenør. Prosjekt for ny Øyra skule i Volda omhandler riving av det gamle skulebygget, samt nybygg og rehabilitering
+												av paviljongbygget. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-d2c9464f8678ccc43614bb2ab892e6d0">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="KUSK - Rehabilitering ">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-404c9db8a808c6fe094f4365d7c933a7')"></div>
+								<div class="overlay">
+									<!-- <h3>KUSK - Rehabilitering </h3> -->
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Ålesund Kommune<br/> <b>Ferdigstillelse:</b> ila 2015<br/> <b>Entrepriseform:</b> Hovedentreprise<br/> <b>Vår rolle:</b> Byggeleder<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet omfatter etablering av ny yttervegg samt
+												forlengelse av bredden av bygget med 1,5 meter. Prosjektet er første del av en større rehabilitering av Kolvikbakken ungdomskole. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-404c9db8a808c6fe094f4365d7c933a7">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="HVO Kaarstad">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-1dfca8fdc46b1414e3477777c1527f83')"></div>
+								<div class="overlay">
+									<h3>HVO Kaarstad</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Statsbygg<br/> <b>Areal, ca:</b> 2700<br/> <b>Enterprisekostnad:</b> Ca 33 mill NOK<br/> <b>Ferdigstillelse:</b> April 2016<br/> <b>Entrepriseform:</b> Generalentreprise<br/> <b>Vår rolle:</b> Byggeleder<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet
+												omfatter primært etablering av ventilasjon i Kaarstadbygget ved Høgskolen i Volda. I tillegg skal det gjennomføres noe innvendig rehabilitering av flater samt utskifting av noe lysarmaturer og elektroinstallasjoner. Bygget sto ferdig i 1922
+												og har idag en vernet fasade. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-1dfca8fdc46b1414e3477777c1527f83">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="HIÅ - Kaldlager">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-fa17c40b622bfd9e3146e43c2d895d29')"></div>
+								<div class="overlay">
+									<h3>HIÅ - Kaldlager</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Statsbygg<br/> <b>Areal, ca:</b> 200<br/> <b>Prosjektkostnad:</b> Ca 3.85 mill NOK<br/> <b>Ferdigstillelse:</b> November 2015<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Etablering
+												av 4 kaldlager a 50m2 ved LAB bygget til Høgskolen i Ålesund. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-fa17c40b622bfd9e3146e43c2d895d29">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="AMFI - Moa syd">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-0642a635647781e0f300c439c19ac3b6')"></div>
+								<div class="overlay">
+									<h3>AMFI - Moa syd</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI<br/> <b>Prosjektkostnad:</b> Ca 650 MNOK eks mva<br/> <b>Ferdigstillelse:</b> Estimert 2020<br/> <b>Vår rolle:</b> Prosjektleder / Byggherreombud / SHA KU<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet omhandler
+												riving av eksisterende bygningsmasse, samt oppføring av nybygg på ca 35.000m2. Bygget vil primært bli kjøpesenter samt kino og kontor. I prosjektet ligger det også etablering av gangbru over til møa øst. Med denne etableringen blir AMFI Moa
+												Norges største kjøpesenter. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-0642a635647781e0f300c439c19ac3b6">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="AMFI - Brofestebygget">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-be49325c3d6e90d7f07b7ea3c131609b')"></div>
+								<div class="overlay">
+									<h3>AMFI - Brofestebygget</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI<br/> <b>Prosjektkostnad:</b> Ca 100 MNOK eks mva<br/> <b>Ferdigstillelse:</b> Desember 2015<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Prosjektleder / Prosjekteringsleder / Byggherreombud<br/>												<br/><b>Andre opplysninger:</b><br/>Brofestebygget er ett 4 etasjers høyt tilbygg ved moa øst. Fra bygget skal det i fremtiden etableres gangbro over til moa syd. Bygget inneholder butikker, cafe og kontorer. Prosjektet omhandler også utvidelse
+												av moa øst i syd med ny butikk for expert. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-be49325c3d6e90d7f07b7ea3c131609b">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="SUNNMØRSBADET, FOSNAVÅG">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-a0fe54ad7acf1c7592ce0fcec0c984e6')"></div>
+								<div class="overlay">
+									<h3>SUNNMØRSBADET, FOSNAVÅG</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Sunnmørsbadet AS<br/> <b>Prosjektkostnad:</b> -<br/> <b>Ferdigstillelse:</b> 2015 Mars<br/> <b>Entrepriseform:</b> Generalentreprise<br/> <b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Prosjektet
+												omfatter rehabilitering av eksisterende anlegg samt et større tilbygg som er nytt. Topp moderne badeanlegg med flere ulike bassenger. Bølgebasseng med egen motstrømskanal, terapibasseng og treningsbasseng med stupetårn. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-a0fe54ad7acf1c7592ce0fcec0c984e6">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="NY AMK SENTRAL, ÅLESUND SJUKEHUS">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-79b1b9df00122cc2e28cc1bd5350fb39')"></div>
+								<div class="overlay">
+									<h3>NY AMK SENTRAL, ÅLESUND SJUKEHUS</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Helse Møre og Romsdal HF<br/> <b>Areal, ca:</b> 431m2<br/> <b>Prosjektkostnad:</b> Ca 35 MNOK eks mva<br/> <b>Ferdigstillelse:</b> 2015<br/> <b>Entrepriseform:</b> Delte entrerpiser, Bygningsmessig hovedentreprenør<br/> <b>Vår rolle:</b>												Prosjekteringsleder/ Ansvarlig søker / Byggeleder.<br/> <br/><b>Andre opplysninger:</b><br/>To etasjers bygg lokalisert på en krevende tomt nært opp til eksisterende sjukehus. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-79b1b9df00122cc2e28cc1bd5350fb39">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="NY STRÅLEBUNKER, ÅLESUND SJUKEHUS">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-e85fa6ede9f1ed3b2ac3fed0191e6fb6')"></div>
+								<div class="overlay">
+									<h3>NY STRÅLEBUNKER, ÅLESUND SJUKEHUS</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Helse Møre og Romsdal HF<br/> <b>Areal, ca:</b> 310m2<br/> <b>Prosjektkostnad:</b> Ca 17 MNOK eks mva<br/> <b>Ferdigstillelse:</b> 2014<br/> <b>Entrepriseform:</b> Bygningsmessig hovedentreprise med sidestilte tekniske entreprenører<br/>												<b>Vår rolle:</b> Prosjekteringsleder/ Ansvarlig søker / Byggeleder.<br/> <br/><b>Andre opplysninger:</b><br/>Utvidelse av kreftavdelingen ved ålesund sjukehus med en ny strålebunker med tilhørende støttearealer. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-e85fa6ede9f1ed3b2ac3fed0191e6fb6">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Strandgata 2">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-0c3bbee2816682475da6af9ebacde8af')"></div>
+								<div class="overlay">
+									<h3>Strandgata 2</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Strandgt.2 AS<br/> <b>Areal, ca:</b> 3800<br/> <b>Enterprisekostnad:</b> 36 MNOK eks.mva<br/> <b>Ferdigstillelse:</b> 2015<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Ombygging
+												i eksisterende bygningsmasse, samt tilbygg mot sør. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-0c3bbee2816682475da6af9ebacde8af">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Auto 8-8 Kristiansund">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-542a941e4976cb9ecab1d6dad623f63d')"></div>
+								<div class="overlay">
+									<h3>Auto 8-8 Kristiansund</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Auto 8-8 Sildnes & Halaas AS<br/> <b>Areal, ca:</b> 3200kvm<br/> <b>Prosjektkostnad:</b> Ca. 50 MNOK eks. mva.<br/> <b>Ferdigstillelse:</b> 2015<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Byggherreombud<br/>												<br/><b>Andre opplysninger:</b><br/>Ny og moderne bilforretning på løkkemyra i Kristiansund. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-542a941e4976cb9ecab1d6dad623f63d">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Ambulansestasjon">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-d13cd1f8baf273868e8555618a44d3d9')"></div>
+								<div class="overlay">
+									<h3>Ambulansestasjon</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Aukra Kommune<br/> <b>Areal, ca:</b> 430<br/> <b>Prosjektkostnad:</b> 10 mill eks mva<br/> <b>Ferdigstillelse:</b> 2014<br/> <b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Bygg inneholdende ambulansegarasje
+												og leiligheter for personell. I tillegg garasje for driftsavd. I Aukra kommune. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-d13cd1f8baf273868e8555618a44d3d9">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Energisentral aukra kommune">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-515b9d5df7f15107a21c8e19ba41aae7')"></div>
+								<div class="overlay">
+									<h3>Energisentral aukra kommune</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Aukra Kommune<br/> <b>Areal, ca:</b> 170<br/> <b>Prosjektkostnad:</b> 12 mill eks mva<br/> <b>Ferdigstillelse:</b> 2013<br/> <b>Vår rolle:</b> Ass PL / Byggeleder<br/> <br/><b>Andre opplysninger:</b><br/>Bygg inkl. energitekniske
+												installasjoner for levering av fjernvarme. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-515b9d5df7f15107a21c8e19ba41aae7">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Ergansenteret i Bud">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-2d7da0c7a5cdfd1f56cf70f461f58636')"></div>
+								<div class="overlay">
+									<h3>Ergansenteret i Bud</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Ergan Eiendom AS<br/> <b>Areal, ca:</b> 1400<br/> <b>Prosjektkostnad:</b> 25 mill eks mva<br/> <b>Ferdigstillelse:</b> 2012<br/> <b>Vår rolle:</b> BHO / PL<br/> <br/><b>Andre opplysninger:</b><br/>Ombygging og utvidelse av
+												eksisterende bygning for å gi plass til opplevelsessenter og læring knyttet til kystkultur, kysthistorie og regional industriutvikling innen olje/gass </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-2d7da0c7a5cdfd1f56cf70f461f58636">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Nasjonal turistveg Trollstigen">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-2f4e93f1438e21f22c375906f400f574')"></div>
+								<div class="overlay">
+									<h3>Nasjonal turistveg Trollstigen</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Statens vegvesen, Nasjonale turistveger<br/> <b>Prosjektkostnad:</b> 150 Mill eks mva<br/> <b>Ferdigstillelse:</b> 2012<br/> <b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Bygging/ombygging av installasjoner
+												på Trollstigplatået som turistattraksjon. Grunnarbeider, stål- og betongarbeider tilknyttet stier, utkikksplattformer m.m. Ny fjellstue. Ny riksvegbru. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-2f4e93f1438e21f22c375906f400f574">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Glomstua omsorgssenter og sjukeheim, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-5304aefb0f0d1c8e1b2a607b63f079a5')"></div>
+								<div class="overlay">
+									<h3>Glomstua omsorgssenter og sjukeheim, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde Eiendom KF<br/> <b>Areal, ca:</b> 5.350 m2 BTA<br/> <b>Prosjektkostnad:</b> 148 mill NOK<br/> <b>Ferdigstillelse:</b> 2010<br/> <b>Entrepriseform:</b> Hovedentreprise bygg, tekniske sideentrepriser<br/> <b>Vår rolle:</b>												Prosjekt-, prosjekterings- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Ombygging/rehabilitering og tilbygg </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-5304aefb0f0d1c8e1b2a607b63f079a5">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Moldegård Storsenter">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-db8165d6608c53c75dcec2039e7fd841')"></div>
+								<div class="overlay">
+									<h3>Moldegård Storsenter</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde Bransjesenter AS<br/> <b>Areal, ca:</b> 37.000 m2, fordelt på to nye bygg.<br/> <b>Prosjektkostnad:</b> 350-400 mill NOK<br/> <b>Ferdigstillelse:</b> 2009<br/> <b>Entrepriseform:</b> Totalentreprise bygg øst. Delte
+												entrepriser bygg vest.<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings- og byggeledelse/ byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Nytt faghandelsenter sentralt plassert i Molde. Delvis med parkering i underetasjer. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-db8165d6608c53c75dcec2039e7fd841">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Bekkevoll ungdomsskole, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-4cd539c31097b4c28902fe7980af3ea0')"></div>
+								<div class="overlay">
+									<h3>Bekkevoll ungdomsskole, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde kommune<br/> <b>Areal, ca:</b> 6.650 m2 BTA<br/> <b>Prosjektkostnad:</b> Ca 162 mill NOK<br/> <b>Ferdigstillelse:</b> 2009<br/> <b>Entrepriseform:</b> Hovedentreprise bygg, tekniske sideentrepriser<br/> <b>Vår rolle:</b>												Prosjektledelse, byggeledelse<br/> </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-4cd539c31097b4c28902fe7980af3ea0">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Roseby Vest (Gml. Godssentralen), Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-ca3c37c1ad0e5d56101612fb8f1bd97a')"></div>
+								<div class="overlay">
+									<h3>Roseby Vest (Gml. Godssentralen), Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI Bygg Midt-Norge AS<br/> <b>Areal, ca:</b> 19.200 m2<br/> <b>Prosjektkostnad:</b> 250 mill NOK<br/> <b>Ferdigstillelse:</b> 2008/2009<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings-
+												og byggeledelse/ byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Nytt foretnings- og kontorbygg like ved Amfi Roseby i Lingedalen i Molde. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-ca3c37c1ad0e5d56101612fb8f1bd97a">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Vestnes Park">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-6519f9cf56961d09212cef5d187619c1')"></div>
+								<div class="overlay">
+									<h3>Vestnes Park</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Byggfellesskapet Vestnes Park v/ Vestnes Park AS<br/> <b>Areal, ca:</b> 2.800 m2, fordelt på næringsareal og leiligheter<br/> <b>Prosjektkostnad:</b> Ca 47 mill NOK<br/> <b>Ferdigstillelse:</b> 2008<br/> <b>Entrepriseform:</b>												Totalentreprise<br/> <b>Vår rolle:</b> Prosjektledelse og byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Nytt nærings- og leilighetsbygg i sentrum av Vestnes kommune. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-6519f9cf56961d09212cef5d187619c1">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Nasjonal Turisveg Atlanterhavsvegen">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-458a8f43b6270f9129a1aae359891da4')"></div>
+								<div class="overlay">
+									<h3>Nasjonal Turisveg Atlanterhavsvegen</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Statens Vegvesen Region Midt Nasjonalt turistvegprosjekt.<br/> <b>Prosjektkostnad:</b> Ca 10 mill NOK<br/> <b>Ferdigstillelse:</b> 2008<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Byggeledelse<br/>												<br/><b>Andre opplysninger:</b><br/>Opprustning av vegen fra Bud til Kårvåg til nasjonal turistveg </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-458a8f43b6270f9129a1aae359891da4">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Tollero omsorgsboliger, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-ac1bd10c56d9db3bd511c1b916404c8f')"></div>
+								<div class="overlay">
+									<h3>Tollero omsorgsboliger, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde Utleieboliger KF<br/> <b>Areal, ca:</b> 1.600 m2 BTA<br/> <b>Prosjektkostnad:</b> Ca 36 mill NOK.<br/> <b>Ferdigstillelse:</b> 2008<br/> <b>Entrepriseform:</b> Hovedentreprise bygg, tekniske sideentrepriser<br/> <b>Vår rolle:</b>												Prosjekt-, prosjekterings- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Psykiatriboliger, 16 plasser. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-ac1bd10c56d9db3bd511c1b916404c8f">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="AMFI Futura, Kristiansund">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-7887ced11589e42a60df621f37302053')"></div>
+								<div class="overlay">
+									<h3>AMFI Futura, Kristiansund</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI Futura AS<br/> <b>Areal, ca:</b> 1.000 + 10.000 m2<br/> <b>Prosjektkostnad:</b> Ca 45 mill NOK<br/> <b>Ferdigstillelse:</b> 2007<br/> <b>Entrepriseform:</b> Hovedentreprise<br/> <b>Vår rolle:</b> Prosjekt- og byggeledelse<br/>												<br/><b>Andre opplysninger:</b><br/>Tilbygg og ombygging </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-7887ced11589e42a60df621f37302053">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Folkebad Reknes, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-1bafa32d59e1759e68edaf5c576655bf')"></div>
+								<div class="overlay">
+									<h3>Folkebad Reknes, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Parkgården AS/Molde kommune<br/> <b>Areal, ca:</b> 5.500 m2 BTA<br/> <b>Prosjektkostnad:</b> Ca 140 mill NOK<br/> <b>Ferdigstillelse:</b> 2007<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Prosjekt-,
+												prosjekterings- og byggeledelse<br/> </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-1bafa32d59e1759e68edaf5c576655bf">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="MRF-bygget, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-3505217f4240ac8b9a107db20fef058c')"></div>
+								<div class="overlay">
+									<h3>MRF-bygget, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Fjord 1 MRF AS<br/> <b>Areal, ca:</b> 1.000 m2<br/> <b>Prosjektkostnad:</b> NOK 13 mill. <br/> <b>Ferdigstillelse:</b> 2007<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Ombygging,
+												samt påbygg med en ny etasje på toppen. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-3505217f4240ac8b9a107db20fef058c">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Angvik gamle handelssted, Gjemnes">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-ff5860401452f8b9dde8c255b75079ae')"></div>
+								<div class="overlay">
+									<h3>Angvik gamle handelssted, Gjemnes</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Angvik Gamle Handelssted AS<br/> <b>Areal, ca:</b> Ca 2.600 m2<br/> <b>Ferdigstillelse:</b> 2007<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Eksisterende
+												tønnefabrikk som bygges opp igjen i særegen bryggestil som Hotell. Tilhørende sammen med "bygdestue" for Angvik Bygdelag og rehabilitering av tidligere gammel butikk / landbu som er tenkt brukt som museum / kultur / næringssenter. I samme
+												konsept ligger også bygging av et badehus (SPA) og rorbuer. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-ff5860401452f8b9dde8c255b75079ae">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Bølgen, Fræna ">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-848741a2af3dc9f1c5bdcc145d6e9cb3')"></div>
+								<div class="overlay">
+									<h3>Bølgen, Fræna </h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Bølgen Eiendom Elnesvågen AS<br/> <b>Areal, ca:</b> 5000 m2<br/> <b>Prosjektkostnad:</b> Ca 45 mill NOK<br/> <b>Ferdigstillelse:</b> 2006<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Byggherreombud<br/>												</p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-848741a2af3dc9f1c5bdcc145d6e9cb3">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Molde Næringseiendom">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-99e66f08dab1bfb0cb4057d879f322bc')"></div>
+								<div class="overlay">
+									<h3>Molde Næringseiendom</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde Næringseiendom AS<br/> <b>Areal, ca:</b> 15.000 m2<br/> <b>Ferdigstillelse:</b> 2006<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Komplisert
+												ombyggingsprosjekt. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-99e66f08dab1bfb0cb4057d879f322bc">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Romsdal videregående skole, Molde ">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-76d48193a55454cb3faaadf62f5092e1')"></div>
+								<div class="overlay">
+									<h3>Romsdal videregående skole, Molde </h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Møre og Romsdal fylke<br/> <b>Areal, ca:</b> 1 300 m²<br/> <b>Prosjektkostnad:</b> ca. 35 mill. NOK<br/> <b>Ferdigstillelse:</b> 2006<br/> <b>Entrepriseform:</b> Hovedentreprise<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings-
+												og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Frittstående nybygg i tilknytning til eksisterende skoleanlegg </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-76d48193a55454cb3faaadf62f5092e1">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Molde videregående skole">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-8890feadc21b37a30c45866e8e97b075')"></div>
+								<div class="overlay">
+									<h3>Molde videregående skole</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Møre og Romsdal fylke<br/> <b>Areal, ca:</b> ca. 3 700 m²<br/> <b>Prosjektkostnad:</b> ca. 105 mill. NOK<br/> <b>Ferdigstillelse:</b> 2006<br/> <b>Entrepriseform:</b> Hovedentreprise<br/> <b>Vår rolle:</b> Prosjekt-, prosjekterings-
+												og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>I tillegg til de to nye fløyene skal det utføres en del vedlikeholdstiltak i eksisterende bygninger </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-8890feadc21b37a30c45866e8e97b075">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="AMFI Moa, Ålesund">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-4188722c9b821daa7de93ac38786a1c6')"></div>
+								<div class="overlay">
+									<h3>AMFI Moa, Ålesund</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI Bygg Moa AS<br/> <b>Ferdigstillelse:</b> 2005/2006<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjektledelse, byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>AMFI Moa er ombygd og bygget
+												ut flere ganger gjennom de siste år, vi har vært med på alle disse utbyggingene. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-4188722c9b821daa7de93ac38786a1c6">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Kunstmuseum Ålesund">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-e50823c31238a199c3aca4ef51261080')"></div>
+								<div class="overlay">
+									<h3>Kunstmuseum Ålesund</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Møre og Romsdal fylke<br/> <b>Areal, ca:</b> 800 m2<br/> <b>Prosjektkostnad:</b> Ca 23 mill NOK<br/> <b>Ferdigstillelse:</b> 2005<br/> <b>Entrepriseform:</b> Hovedentreprise<br/> <b>Vår rolle:</b> Byggeledelse<br/> </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-e50823c31238a199c3aca4ef51261080">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Kleive skole og barnehage, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-0c9fa7cc24e32f7f2ed7d81196bb6766')"></div>
+								<div class="overlay">
+									<h3>Kleive skole og barnehage, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Molde kommune<br/> <b>Areal, ca:</b> 2.500 m2 BRA<br/> <b>Prosjektkostnad:</b> Ca 38 mill NOK<br/> <b>Ferdigstillelse:</b> 2005<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Prosjektledelse, byggherreombud<br/>												<br/><b>Andre opplysninger:</b><br/>Prosjektgjennomføring i samarbeid Molde kommune og Kleive Grendahus AL </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-0c9fa7cc24e32f7f2ed7d81196bb6766">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Bjorligard, Lesja">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-2114c838dfc7fb8e5004412a7de1cba1')"></div>
+								<div class="overlay">
+									<h3>Bjorligard, Lesja</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Bjorligard Utbygging AS<br/> <b>Areal, ca:</b> 3.500 m2<br/> <b>Prosjektkostnad:</b> Ca 65 mill NOK<br/> <b>Ferdigstillelse:</b> 2005<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjektledelse. Byggeledelse.<br/>												<br/><b>Andre opplysninger:</b><br/>28 leiligheter samt servicebygg på 750 m2. Infrastruktur/tomtearbeider for hyttegrend 20 hytter </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-2114c838dfc7fb8e5004412a7de1cba1">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Moldetorget">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-23b3b96805d222aee6738043e01475dc')"></div>
+								<div class="overlay">
+									<h3>Moldetorget</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Moldetorget Eiendom AS<br/> <b>Areal, ca:</b> 10.000 m2 butikkareal<br/> <b>Prosjektkostnad:</b> Ca 160 mill NOK<br/> <b>Ferdigstillelse:</b> 2003<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b> Prosjektledelse,
+												byggherreombud
+												<br/> <br/><b>Andre opplysninger:</b><br/>Ombygging av eksisterende bygninger i Storgata i Molde. Senteret skal i 2006 ytterligere utvides vestover (Moldetorget Vest). </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-23b3b96805d222aee6738043e01475dc">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="refitem">
+							<a href="" title="Seilet / Bjørnsonhuset, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-d6bfe9fc70f4dc6f34da19eb161bdc27')"></div>
+								<div class="overlay">
+									<h3>Seilet / Bjørnsonhuset, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Byggfellesskapet Reknes v/Seilet Hotell Eiendom AS<br/> <b>Areal, ca:</b> 10.500 m2<br/> <b>Prosjektkostnad:</b> Ca 250 mill NOK<br/> <b>Ferdigstillelse:</b> 2002<br/> <b>Entrepriseform:</b> Totalentreprise<br/> <b>Vår rolle:</b>												Byggherreombud<br/> <br/><b>Andre opplysninger:</b><br/>Kulturhus med 800 plasser i amfi, integrert i hotell- og konferanse-delen. Hotelldel med 169 rom. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-d6bfe9fc70f4dc6f34da19eb161bdc27">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Nøisomhed, Molde ">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-766a88e8fc2bd9da6c61b651e6ef88de')"></div>
+								<div class="overlay">
+									<h3>Nøisomhed, Molde </h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Nøisomhed AS<br/> <b>Areal, ca:</b> 1.800 m2<br/> <b>Prosjektkostnad:</b> Ca 18 mill NOK <br/> <b>Ferdigstillelse:</b> 2002<br/> <b>Entrepriseform:</b> Totalentreprise bygg, egen utomhusentreprise<br/> <b>Vår rolle:</b> Prosjekt-,
+												prosjekterings- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>To nye kontorbygg, rehabilitering av eldre bygg i samarbeid med fylkeskonservatoren, nytt utomhusanlegg. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-766a88e8fc2bd9da6c61b651e6ef88de">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Høgskolen i Molde – byggetrinn I og II ">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-70ea09f18b8a1a4f5bb364203d2549d3')"></div>
+								<div class="overlay">
+									<h3>Høgskolen i Molde – byggetrinn I og II </h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Statsbygg<br/> <b>Areal, ca:</b> 4.387 m2 BTA<br/> <b>Prosjektkostnad:</b> Ca 98,5 mill NOK<br/> <b>Ferdigstillelse:</b> 2002<br/> <b>Entrepriseform:</b> Generalentreprise<br/> <b>Vår rolle:</b> Byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Vi
+												hadde også byggeledelsen for byggetrinn I på Høgskolen. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-70ea09f18b8a1a4f5bb364203d2549d3">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Postterminalen, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-da8d075f1f8452df4042dbc77b53d5e7')"></div>
+								<div class="overlay">
+									<h3>Postterminalen, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Posten Norge BA, Logistikk 2000<br/> <b>Areal, ca:</b> 5.820 m2<br/> <b>Prosjektkostnad:</b> Ca 60 mill NOK<br/> <b>Ferdigstillelse:</b> 2001<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Totalentreprise<br/>												</p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-da8d075f1f8452df4042dbc77b53d5e7">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Molde stadion">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-17a3903e625f518cd552943013d611c9')"></div>
+								<div class="overlay">
+									<h3>Molde stadion</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> Sameiet Molde nye stadion AS<br/> <b>Areal, ca:</b> Totalt 42.000 m2 inkl 2.800 m2 næringsareal<br/> <b>Prosjektkostnad:</b> Ca 212 mill NOK totalt<br/> <b>Ferdigstillelse:</b> 1998<br/> <b>Entrepriseform:</b> Totalentreprise<br/>												<b>Vår rolle:</b> Byggherreombud<br/> </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-17a3903e625f518cd552943013d611c9">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+						<div class="refitem">
+							<a href="" title="Roseby, Molde">
+								<div class="bilde" style="background-image: url('http://www.hamsto.no/uploads/_CGSmartImage/img-7d1f235805e8ba5bac596400baf7ee45')"></div>
+								<div class="overlay">
+									<h3>Roseby, Molde</h3>
+									<div class="info">
+										<div class="txt">
+											<p>
+												<b>Byggherre:</b> AMFI Bygg Midt-Norge AS<br/> <b>Areal, ca:</b> 13.000 m2 butikkareal<br/> <b>Entrepriseform:</b> Delte entrepriser<br/> <b>Vår rolle:</b> Prosjekt- og byggeledelse<br/> <br/><b>Andre opplysninger:</b><br/>Vi har vært med
+												på all utbygging og ombygging på Roseby. Våren 2006 ferdigstilles en utbygging mot øst, med nye fasader og ominnredning. Samtidig klargjøres det for en større utbygging mot nord. </p>
+										</div>
+										<div class="img">
+											<img src="http://www.hamsto.no/uploads/_CGSmartImage/img-7d1f235805e8ba5bac596400baf7ee45">
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+					<div class="clearb"></div>
+				</div>
+
+				<div class="clearb"></div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="inner">
+				<p style="text-align: center;"><strong>Hammerø og Storvik Prosjekt AS</strong> // org.nr. 983 596 754</p>
+				<p style="text-align: center;"><strong>Molde</strong> // Øvre veg 24, 6415 Molde // <strong>Telefon</strong> 712 40 400 <br /><strong>Ålesund </strong>// Postvegen 2, 6018 Ålesund // Postboks 7514, Spjelkavik, 6022 Ålesund<br /><strong>Kristiansund</strong> // Storgata 3, 6509
+					Kristiansund // <strong>Telefon</strong> 712 40 400</p>
+				<div class="clearb"></div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -118,6 +118,9 @@ ul.bxslider {
   text-indent: -9999px;
   z-index: 10;
 }
+.bx-wrapper .bx-controls-direction a:hover {
+   border: none;
+}
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
