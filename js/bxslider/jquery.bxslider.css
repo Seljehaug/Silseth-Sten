@@ -116,7 +116,7 @@ ul.bxslider {
   width: 35px;
   height: 35px;
   text-indent: -9999px;
-  z-index: 10;
+  z-index: 0;
 }
 .bx-wrapper .bx-controls-direction a:hover {
    border: none;

@@ -55,9 +55,15 @@ $(function() {
 		if (winwidth > 750) {
 			twidth = 250;
 			theight = 250;
+		} else if (winwidth > 450) {
+			twidth = 200;
+			theight = 200;
+		} else if (winwidth > 350) {
+			twidth = 150;
+			theight = 150;
 		} else {
-			twidth = 125;
-			theight = 125;
+			twidth = 140;
+			theight = 140;
 		}
 		countcols = parseInt(winwidth / twidth);
 		if (countcols > 2) {

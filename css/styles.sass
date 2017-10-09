@@ -30,15 +30,16 @@ h3
 	font-weight: 600
  // 	margin-bottom: 0.2em
 h4
-	font-size: 1.5rem
+	font-size: 1.2rem
 	text-transform: uppercase
 	font-weight: 600
-// 	margin-bottom: 0.2em
+	// margin-bottom: 0.2rem
 p,a
 	font-size: 1.2rem
 	text-decoration: none
 	line-height: 1.4em
-
+// p
+// 	margin-bottom: 1rem
 a
 	padding: 0.1em 0
 
@@ -66,6 +67,19 @@ a:hover
 		transition: background 0.3s ease-in-out
 		// transition: color 0.3s ease-in-out
 
+.btn-group
+	display: flex
+	a
+		margin-right: 10px
+@media(max-width: 500px)
+	.btn-group
+		a
+			font-size: 0.8rem
+@media(max-width: 400px)
+	.btn-group
+		a
+			padding: 0.2em 0.4em
+
 @media(max-width: 750px)
 	h1
 		font-size: 2.8rem
@@ -74,7 +88,7 @@ a:hover
 		line-height: 1.2em
 		// text-align: center
 	h3
-		font-size: 1.2rem
+		font-size: 1.5rem
 	h4
 		font-size: 1rem
 	p,a
@@ -117,8 +131,18 @@ section:first-of-type
 .white-transparent
 	background: rgba(255, 255, 255, 0.6)
 
+.no-border
+	border: none
+
 .content-below
 	margin-top: 1rem
+
+.para-width
+	max-width: 800px
+	width: 100%
+
+.sub-section
+	margin-top: 2rem
 
 // --- Icons and logos ---
 .icon
@@ -146,12 +170,17 @@ section:first-of-type
 .logo-norsk-kvalitet
 	background-image: url(../img/icons/norsk_kvalitet.svg)
 
+.down-arrow
+	background-image: url(../img/icons/arrow_right_black.svg)
+	font-size: 25px
+	display: inline-block
+	transform: rotate(90deg)
+
 // End of icons and logos
 
 // --- menu ---
 #mobilemenu_show
 	display: none
-
 #menu
 	position: fixed
 	top: 0
@@ -295,10 +324,12 @@ section:first-of-type
 		left: 0
 		right: 0
 		height: 70px
-		background: $grey-transparent
+		z-index: 100
+		background: rgba(212, 212, 212, 1)
 		.logo-wrapper
 			position: absolute
 			left: 5%
+			top: -16px
 		.hamburger
 			position: absolute
 			right: 5%
@@ -311,161 +342,7 @@ section:first-of-type
 		display: none
 // end of menu
 
-// --- two-boxes ---
-.two-boxes
-	overflow: hidden
-	display: flex
-	// align-items: center
-	.box
-		width: 49%
-		// float: left
-	.box:first-child
-		margin-right: 2%
-	p
-		margin-bottom: 1rem
-	p:last-child
-		margin-bottom: 0
-.two-boxes.align-center
-	align-items: center
-
-.two-boxes.content-below
-	margin-top: 2rem
-
-@media(max-width: 750px)
-	.two-boxes
-		flex-direction: column
-		.box
-			// width: 100%
-			width: 80%
-			margin: 0 auto
-		.box:first-child
-			// margin-right: 0
-			margin: 0 auto
-			margin-bottom: 2rem
-// end of two-boxes
-
-// --- three-boxes ---
-.three-boxes
-	display: flex
-	align-items: center
-	flex-wrap: wrap
-	.box
-		width: 33.333333333%
-		display: flex
-		flex-direction: column
-
-@media(max-width: 750px)
-	.three-boxes
-		.box
-			width: 50%
-
-@media(max-width: 500px)
-	.three-boxes
-		.box
-			width: 100%
-// end of three-boxes
-
-// --- grid ---
-.grid
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	align-items: baseline
-	.box
-		width: 28%
-		margin-bottom: 2rem
-		position: relative
-		.number
-			position: absolute
-			top: 10%
-			right: 5%
-			font-weight: 700
-			font-size: 1rem
-			background: $grey-dark
-			padding: 1em
-			border-radius: 100%
-			color: $white
-		p
-			text-align: center
-			font-weight: 700
-			margin-top: 5px
-	a
-		width: 100%
-		background: #b3b3b3
-		background: linear-gradient(to right, rgba(200, 200, 200, 0), #b3b3b3, #b3b3b3, rgba(200, 200, 200, 0))
-		color: $black
-		border-radius: 0
-		text-align: center
-		padding: 0.6em 0
-		transition: background 0.3s ease-in
-		position: relative
-		border: 1px solid transparent
-		// .overlay
-			// opacity: 0
-			// position: absolute
-			// left: 0
-			// top: 0
-			// bottom: 0
-			// right: 0
-			// background: #b3b3b3
-		// &:hover
-		// 	.overlay
-		// 		opacity: 1
-
-@media(max-width: 700px)
-	.grid
-		.box
-			width: 45%
-
-// end of grid
-
-// --- slideshow ---
-.slideshow
-	.slide
-		min-width: 1px
-		min-height: 1px
-	.two-boxes
-		// width: 80%
-		// margin: 0 auto
-		.box:first-child
-			padding-left: 100px
-		.box:last-child
-			padding-right: 100px
-
-@media(max-width: 750px)
-	.slideshow .two-boxes
-		.box
-			width: 80%
-			margin: 0 auto
-		.box:first-child
-			padding-left: 25px
-			padding-right: 25px
-			margin-bottom: 2rem
-			width: 100%
-			h2
-				// text-align: center
-				width: 80%
-				margin: 0 auto
-				margin-bottom: 1rem
-			p
-				width: 80%
-				margin: 0 auto
-		.box:last-child
-			padding-left: 25px
-			padding-right: 25px
-			img
-				max-height: 250px
-				margin: 0 auto
-				width: auto
-
-@media(max-width: 400px)
-	.slideshow .two-boxes
-		.box:first-child p
-			width: 75%
-			margin: 0 auto
-// end of slideshow
-
-
+// --- Footer --
 .footer
 	background: url(../img/background_top.jpg) no-repeat
 	background-size: cover
@@ -474,6 +351,8 @@ section:first-of-type
 	border-bottom: none
 	.content-wrapper
 		padding-bottom: 2rem
+	h2
+		margin-bottom: 0
 	.overlay
 		position: absolute
 		top: 0
@@ -610,41 +489,226 @@ section:first-of-type
 			margin-top: 1rem
 			.phone
 				margin-top: 0
+// End of footer
 
+// --- two-boxes ---
+.two-boxes
+	overflow: hidden
+	display: flex
+	// align-items: center
+	.box
+		width: 49%
+		// float: left
+	.box:first-child
+		margin-right: 2%
+	p
+		margin-bottom: 1rem
+	p:last-child
+		margin-bottom: 0
+.two-boxes.align-center
+	align-items: center
 
-// ---- PAGE SPEFICIC STYLES ----
-// #minnestener
-// 	.two-boxes.content-below
-// 		margin-top: 2rem
+.two-boxes.content-below
+	margin-top: 2rem
 
+@media(max-width: 750px)
+	.two-boxes
+		flex-direction: column
+		.box
+			width: 100%
+			// width: 80%
+			// margin: 0 auto
+		.box:first-child
+			// margin-right: 0
+			margin: 0 auto
+			margin-bottom: 2rem
+// end of two-boxes
 
-// --- ISOTOPE STYLES  ---
-#isotope-grid
-	.info
-		display: none
-	.grid-item
-		padding: 1rem
-		width: 25%
-		// border: 1px solid black
-		// transition: width 0.3s ease-in-out
-	.large
-		width: 50%
-		// transition: width 0.3s ease-in-out
-		// border: 1px solid black
-		background: #f2f2f2
-		// .info
-		// 	img
-		// 		width: 50%
-		// 		float: left
+// --- three-boxes ---
+.three-boxes
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.box
+		width: 33.333333333%
+		display: flex
+		flex-direction: column
 
+@media(max-width: 750px)
+	.three-boxes
+		.box
+			width: 50%
 
+@media(max-width: 500px)
+	.three-boxes
+		.box
+			width: 100%
+// end of three-boxes
+
+// --- price-list ---
+.price-list
+	text-align: center
+	padding: 2rem 0
+	border-bottom: 1px solid $grey
+	border-top: 1px solid $grey
+	position: relative
+	span
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		right: 0
+	.logo-wrapper
+		display: inline
+	h3
+		display: inline
+		margin-left: 10px
+// end of price-list
+
+// --- included ---
+.included
+	li
+		margin-bottom: 0.05rem
+		display: flex
+		align-items: baseline
+	span
+		font-weight: 600
+		margin-right: 10px
+	p
+// end of included
+
+// --- grid ---
+.grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: baseline
+	.box
+		width: 28%
+		margin-bottom: 2rem
+		position: relative
+		.number
+			position: absolute
+			top: 10%
+			right: 5%
+			font-weight: 700
+			font-size: 1rem
+			background: $grey-dark
+			padding: 1em
+			border-radius: 100%
+			color: $white
+		p
+			margin-top: 5px
+	a
+		width: 100%
+		background: #b3b3b3
+		background: linear-gradient(to right, rgba(200, 200, 200, 0), #b3b3b3, #b3b3b3, rgba(200, 200, 200, 0))
+		color: $black
+		border-radius: 0
+		text-align: center
+		padding: 0.6em 0
+		transition: background 0.3s ease-in
+		position: relative
+		border: 1px solid transparent
+
+@media(max-width: 700px)
+	.grid
+		.box
+			width: 45%
+// end of grid
+
+// --- slideshow ---
+.slideshow
+	.slide
+		min-width: 1px
+		min-height: 1px
+	.two-boxes
+		// width: 80%
+		// margin: 0 auto
+		.box:first-child
+			padding-left: 100px
+		.box:last-child
+			padding-right: 100px
+
+@media(max-width: 750px)
+	.slideshow .two-boxes
+		.box
+			width: 80%
+			margin: 0 auto
+		.box:first-child
+			padding-left: 25px
+			padding-right: 25px
+			margin-bottom: 2rem
+			width: 100%
+			h2
+				// text-align: center
+				width: 80%
+				margin: 0 auto
+				margin-bottom: 1rem
+			p
+				width: 80%
+				margin: 0 auto
+		.box:last-child
+			padding-left: 25px
+			padding-right: 25px
+			img
+				max-height: 250px
+				margin: 0 auto
+				width: auto
+
+@media(max-width: 400px)
+	.slideshow .two-boxes
+		.box:first-child p
+			width: 75%
+			margin: 0 auto
+// end of slideshow
+
+// --- Isotope grid with filtering ---
 #filter-wrapper
+	border-top: 1px solid $grey
+	border-bottom: 1px solid $grey
+	padding: 1rem 0
+	.inner
+		display: flex
+		align-items: center
+		h3
+			color: $grey
+			margin-right: 50px
 	#filter
 		display: flex
+		flex-wrap: wrap
 		li
 			display: inline
 			margin-right: 20px
+			font-weight: 700
+			text-transform: uppercase
+			margin-top: 0.2rem
+			margin-bottom: 0.2rem
+			a
+				padding: 0.2em 0
+				&:hover, &:active, &:focus
+					outline: none
+					border-top: 3px solid $grey
+					border-bottom: 3px solid $grey
 
+@media(max-width: 700px)
+	#filter-wrapper h3
+		margin-right: 35px
+
+@media(max-width: 600px)
+	#filter-wrapper
+		.inner
+			display: flex
+			flex-wrap: wrap
+		h3
+			width: 100%
+			margin-bottom: 0.5rem
+		#filter
+			max-width: 500px
+			flex-wrap: wrap
+			li
+				margin-right: 20px
+				font-size: 0.8rem
 
 #stones
 	width: 100%
@@ -721,6 +785,7 @@ section:first-of-type
 
 			.txt
 				width: 30%
+				transition: width 0.3s ease-in-out
 				h4, p
 					font-size: 1rem
 				h4
@@ -731,6 +796,7 @@ section:first-of-type
 					margin-top: 0.6rem
 			.img
 				width: 65%
+				transition: width 0.3s ease-in-out
 
 		.price
 			display: none
@@ -794,7 +860,6 @@ section:first-of-type
 		-o-transition-duration: 0s
 		transition-duration: 0s
 
-
 /**** Isotope filtering ***
 .isotope-item
 	z-index: 2
@@ -803,11 +868,101 @@ section:first-of-type
 	pointer-events: none
 	z-index: 1
 
-@media screen and (max-width: 850px)
+@media screen and (min-width: 750px) and (max-width: 1200px)
+	#stones
+		.refitem.selected
+			.info
+				.img
+					width: 53%
+					transition: width 0.3s ease-in-out
+				.txt
+					width: 37%
+					transition: width 0.3s ease-in-out
+			.number
+				right: 42%
+
+@media screen and (max-width: 900px)
 	#stones .refitem
 		.overlay .info
-			padding: 0 15px
+			// padding: 0 15px
 		.txt
 			width: 100%
 		.img
 			display: none
+
+	#stones .refitem.selected
+		.overlay
+			opacity: 0.8
+			transition: opacity 0.3s ease-in-out
+			.info
+				.txt
+					max-width: 80%
+					width: 100%
+					margin: 0 auto
+					.item
+						width: 50%
+						float: left
+						padding: 5px 0
+						// &:last-child
+						// 	width: 100%
+	#stones .refitem.selected .number
+		display: none
+
+@media screen and (max-width: 650px)
+	#stones .refitem
+		padding: 1rem
+
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					max-width: 90%
+					width: 100%
+					margin: 0 auto
+
+@media screen and (max-width: 575px)
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					max-width: 100%
+					width: 100%
+
+@media screen and (max-width: 500px)
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					h4, p
+						font-size: 0.8rem
+
+@media screen and (max-width: 350px)
+	#stones .refitem
+		.price p
+			font-size: 0.6rem
+// End of isotope grid with filtering
+
+// ---- PAGE SPEFICIC STYLES ----
+// --- TILBEHØR ---
+#tilbehor
+	.sub-section h3
+		margin-bottom: 2rem
+	.grid
+		h4
+			margin-bottom: 0.5rem
+
+@media(max-width: 1000px)
+	#tilbehor
+		.grid
+			.box
+				width: 45%
+
+@media(max-width: 450px)
+	#tilbehor
+		.grid
+			.box
+				width: 100%
+				img
+					max-width: 80%
+					display: block
+					margin: 0 auto
