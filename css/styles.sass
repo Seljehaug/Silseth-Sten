@@ -38,8 +38,8 @@ p,a
 	font-size: 1.2rem
 	text-decoration: none
 	line-height: 1.4em
-// p
-// 	margin-bottom: 1rem
+p
+	margin-bottom: 1rem
 a
 	padding: 0.1em 0
 
@@ -126,7 +126,7 @@ section
 		padding: 2rem 0
 
 section:first-of-type
-	margin-top: 100px
+	margin-top: 120px
 
 .white-transparent
 	background: rgba(255, 255, 255, 0.6)
@@ -158,17 +158,24 @@ section:first-of-type
 
 .logo-silseth-sten
 	background-image: url(../img/icons/silseth_sten.svg)
-	display: inline-block
-	font-size: 100px
+	// display: inline-block
+	// height: 65px
+	// width: 300px
 
 .logo-norsk-berg
 	background-image: url(../img/icons/norskberg.svg)
+	// height: 50px
+	// width: 50px
 
 .logo-mestermerket
 	background-image: url(../img/icons/mestermerket.svg)
+	// height: 50px
+	// width: 50px
 
 .logo-norsk-kvalitet
 	background-image: url(../img/icons/norsk_kvalitet.svg)
+	// height: 50px
+	// width: 50px
 
 .down-arrow
 	background-image: url(../img/icons/arrow_right_black.svg)
@@ -223,10 +230,14 @@ section:first-of-type
 	height: 120px
 	transition: height 0.3s ease-in-out
 	.lower
-		margin-top: -25px
+		margin-top: -10px
 	.logo-silseth-sten
-		font-size: 100px
-		transition: font-size 0.3s ease-in-out
+		// font-size: 100px
+		height: 65px
+		width: 300px
+		// transition: font-size 0.3s ease-in-out
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
 	ul
 		margin-top: 20px
 		// transition: all 0.3s ease-in-out
@@ -261,19 +272,26 @@ section:first-of-type
 			font-size: 0.9rem
 			transition: font-size 0.3s ease-in-out
 		.logo-silseth-sten
-			font-size: 80px
-			transition: font-size 0.3s ease-in-out
+			// font-size: 80px
+			height: 60px
+			width: 200px
+			transition: height 0.3s ease-in-out
+			transition: width 0.3s ease-in-out
 
 @media(max-width: 750px)
 	#menu.large
 		height: 100px
 		ul li a
-			font-size: 0.9rem
+			font-size: 0.85rem
 			margin-left: 5px
 			transition: font-size 0.3s ease-in-out
 		.logo-silseth-sten
-			font-size: 75px
-			transition: font-size 0.3s ease-in-out
+			height: 50px
+			width: 200px
+			top: 3px
+			transition: height 0.3s ease-in-out
+			transition: width 0.3s ease-in-out
+
 
 #menu.small
 	height: 70px
@@ -282,11 +300,15 @@ section:first-of-type
 		display: none
 		// transition: all 0.3s ease-in-out
 	.lower
-		margin-top: -20px
+		margin-top: -12px
 		// transition: all 0.3s ease-in-out
 	.logo-silseth-sten
-		font-size: 70px
-		transition: font-size 0.3s ease-in-out
+		// font-size: 70px
+		// transition: font-size 0.3s ease-in-out
+		height: 50px
+		width: 200px
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
 
 	ul
 		margin-top: 10px
@@ -307,9 +329,12 @@ section:first-of-type
 		ul li a
 			font-size: 0.8rem
 			transition: font-size 0.3s ease-in-out
-		.logo-silseth-sten
-			font-size: 65px
-			transition: font-size 0.3s ease-in-out
+			margin-left: 10px
+		// .logo-silseth-sten
+		// 	height: 45px
+		// 	width: 200px
+		// 	transition: height 0.3s ease-in-out
+		// 	transition: width 0.3s ease-in-out
 
 @media(max-width: 700px)
 	section:first-of-type
@@ -330,6 +355,10 @@ section:first-of-type
 			position: absolute
 			left: 5%
 			top: -16px
+		.logo-silseth-sten
+			height: 65px
+			width: 200px
+			top: 16px
 		.hamburger
 			position: absolute
 			right: 5%
@@ -351,6 +380,12 @@ section:first-of-type
 	border-bottom: none
 	.content-wrapper
 		padding-bottom: 2rem
+	.logo-silseth-sten
+		height: 60px
+		width: 280px
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
+		margin: 2rem 0 1rem 0
 	h2
 		margin-bottom: 0
 	.overlay
@@ -370,10 +405,11 @@ section:first-of-type
 			.item
 				margin-right: 15px
 			.phone .bold, .email .bold
-				margin-bottom: 3px
+				// margin-bottom: 3px
 		p,a
 			font-size: 1rem
 			text-decoration: none
+			margin-bottom: 0
 		.logos
 			display: flex
 			width: 30%
@@ -381,17 +417,19 @@ section:first-of-type
 			// background: red
 			margin-top: -5px
 	.logos
+		margin-top: -30px
 		.logo-wrapper
-			height: 50px
-			margin-left: 5px
-			// background: yellow
-			.logo
-				// margin-left: 25px
-				height: 50px
+			margin-right: 10px
 	.logo-norsk-berg
-		margin-left: 0
+		// margin-left: 0
+		width: 50px
+		height: 50px
 	.logo-norsk-kvalitet
+		height: 50px
 		width: 100px
+	.logo-mestermerket
+		height: 50px
+		width: 50px
 
 	form
 		margin-top: 1.5rem
@@ -445,45 +483,69 @@ section:first-of-type
 @media(max-width: 900px)
 	.footer
 		.info-bar
+			flex-wrap: wrap
 			.info
 				flex-wrap: wrap
+				width: 100%
+				order: 2
 				.item
 					width: 50%
 					margin-right: 0
+					// margin-bottom: 1rem
+				.item:nth-child(1), .item:nth-child(2)
 					margin-bottom: 1rem
 			.logos
+				width: 100%
 				align-items: center
+				flex-direction: row-reverse
+				margin: 10px 0 1rem 0
 				.logo-wrapper
+					margin-right: 50px
+					&:nth-child(1)
+						order: 1
+					&:nth-child(2)
+						order: 3
+					&:nth-child(3)
+						order: 2
+				.logo-norsk-kvalitet
+					height: 55px
+					width: 125px
+				.logo-mestermerket
+					width: 55px
+					height: 55px
+				.logo-norsk-berg
+					width: 55px
+					height: 55px
 
 @media(max-width: 700px)
 	.footer
-		.info-bar
-			.logos
-				flex-direction: column
-				margin-top: -35px
-				.logo-wrapper
-					margin-bottom: 10px
 		.input-fields
 			.required
 				width: 48%
 				.phone
 					margin-top: 1rem
 
-@media(max-width: 500px)
+@media(max-width: 550px)
 	.footer
 		.info-bar
-			p,a
-				font-size: 0.8rem
-			.info .item
-				width: 45%
-			.phone, .email
-				margin-left: 10%
-		.logos
-			margin-top: -20px
-			.logo-wrapper
-				height: 35px
-				.logo
-					height: 35px
+			.info
+				.item
+					width: 49%
+				.item:nth-child(1), .item:nth-child(3)
+					margin-right: 2%
+			.logos
+				justify-content: flex-end
+				.logo-wrapper
+					// margin-right: 25px
+				.logo-norsk-kvalitet
+					height: 40px
+					width: 90px
+				.logo-mestermerket
+					width: 40px
+					height: 40px
+				.logo-norsk-berg
+					width: 40px
+					height: 40px
 		.input-fields .required
 			width: 100%
 			margin-top: 1rem
@@ -599,6 +661,7 @@ section:first-of-type
 			color: $white
 		p
 			margin-top: 5px
+			margin: 0
 	a
 		width: 100%
 		background: #b3b3b3
@@ -622,6 +685,8 @@ section:first-of-type
 	.slide
 		min-width: 1px
 		min-height: 1px
+		.img-caption
+			margin-top: 1rem
 	.two-boxes
 		// width: 80%
 		// margin: 0 auto
@@ -742,7 +807,7 @@ section:first-of-type
 				font-size: 0.7rem
 				padding: 1em
 				color: $white
-
+				margin: 0
 
 	.bkg-img
 		width: 100%
