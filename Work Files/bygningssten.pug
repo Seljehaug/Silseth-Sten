@@ -1,0 +1,61 @@
+doctype html
+html(lang="no")
+	head
+		title Silseth Sten - Bygningssten
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		// jQuery
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		// Styling
+		link(rel="stylesheet", type="text/css", href="css/normalize.css")
+		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		// bxSlider
+		script(src="js/bxslider/jquery.bxslider.min.js")
+		link(href="js/bxslider/jquery.bxslider.css", rel="stylesheet")
+		// JS
+		script(src="js/silseth.js")
+		// Mmenu 
+		link(rel="stylesheet", href="js/mmenu/css/jquery.mmenu.css", media="screen and (max-width: 700px)")
+		link(rel="stylesheet", href="js/mmenu/extensions/positioning/jquery.mmenu.positioning.css", media="screen and (max-width: 700px)")
+		script(src="js/mmenu/js/jquery.mmenu.min.js")
+		// imagesloaded plugin
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+		// Isotope 
+		script(src="js/isotope.pkgd.min.js")
+		script(src="js/isotope-custom.js")
+		// Typekit
+		<script src="https://use.typekit.net/mrh3ute.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>	
+	
+	body#bygningssten
+		#site.page_home(canvas="container")
+			include includes/menu
+			
+			section
+				.inner
+					.content-wrapper
+						h2 Bygningssten
+						p.semi-bold.para-width Vårt firma har levert bygningsstein til mange kjente bygninger i Sverige, 
+							| Finland og Norge. Bygningssteinen brukes til fasadestein, kantstein, trapper, 
+							| avsatser, gulvflis, peiser, fonteneanlegg og mye mer. Våre kunder er arkitekter, 
+							| entreprenører, byggherrer, kunstnere og private.
+						p.para-width Stein er naturens eget materiale og er meget solid. Naturstein som byggemateriale har vært brukt i 
+							| generasjoner til boliger både innomhus og ute, til alt fra den minste lille stue til store katedraler. 
+							| Naturstein er ikke forbeholdt eksklusive representasjonsbygg og offentlige prosjekter. Finslipt og blankpolert 
+							| stein blir bare mer og mer populært i benkeplater og i alt av inventar i bad og baderom. Vegg og gulv inne blir 
+							| flott i upolert og grovt tilhugget stein. Produkter i naturstein lar seg lett kombinere med andre materialer. - Det 
+							| er bare fantasien som setter grenser.
+						
+						.slideshow
+							.slide
+								img(src="img/bygningssten.jpg")
+								p.img-caption Bildetekst til referansebildet... Ciis et int esenis rem quis evelest am, sant od magnia quia endis ut aliquae ptatur? 
+									| Occus et min rem nulpa parciis ciligni hitate custiis aped quia sundis eatemque culpa quia pa doluptatur andus maion exerum illit aut voluptatur sero il es.
+							.slide
+								img(src="img/om_oss.jpg")
+								p.img-caption Bildetekst til referansebildet... Ciis et int esenis rem quis evelest am, sant od magnia quia endis ut aliquae ptatur? 
+									| Occus et min rem nulpa parciis ciligni hitate custiis aped quia sundis eatemque culpa quia pa doluptatur andus maion exerum illit aut voluptatur sero il es.
+
+								
+			
+			include includes/footer

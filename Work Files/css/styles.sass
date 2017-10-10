@@ -1,0 +1,1014 @@
+@import "variables"
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: $enzo
+	color: $black
+
+body
+	font-size: 100%
+	background: url(../img/background_top.jpg) top left no-repeat
+	background-size: contain
+	background-color: $white
+
+h1
+	font-size: 3.5rem
+	text-transform: uppercase
+	font-weight: 600
+h2
+	font-size: 2.2rem
+	text-transform: uppercase
+	font-weight: 600
+	margin-bottom: 1rem
+	line-height: 1.2em
+h3
+	font-size: 1.8rem
+	text-transform: uppercase
+	font-weight: 600
+h4
+	font-size: 1.2rem
+	text-transform: uppercase
+	font-weight: 600
+p,a
+	font-size: 1.2rem
+	text-decoration: none
+	line-height: 1.4em
+p
+	margin-bottom: 1rem
+a
+	padding: 0.1em 0
+
+a:hover
+	border-bottom: 1px solid
+
+@media(max-width: 750px)
+	h1
+		font-size: 2.8rem
+	h2
+		font-size: 1.8rem
+		line-height: 1.2em
+	h3
+		font-size: 1.5rem
+	h4
+		font-size: 1rem
+	p,a
+		font-size: 1rem
+	.btn
+		font-size: 1rem
+
+.btn
+	background: $grey
+	color: $black
+	text-transform: uppercase
+	font-size: 1rem
+	font-weight: 700
+	padding: 0.4em 1.2em
+	text-decoration: none
+	border: 1px solid transparent
+	border-radius: $radius
+	transition: background 0.3s ease-in-out
+	cursor: pointer
+	&:hover, &:focus
+		outline: none
+		border: 1px solid $grey-dark
+		background: $grey-dark
+		color: $white
+		transition: background 0.3s ease-in-out
+
+.btn-group
+	display: flex
+	a
+		margin-right: 10px
+@media(max-width: 500px)
+	.btn-group
+		a
+			font-size: 0.8rem
+@media(max-width: 400px)
+	.btn-group
+		a
+			padding: 0.2em 0.4em
+
+.btn.btn-black-gradient
+	width: 85%
+	margin: 0 auto
+	background: #b3b3b3
+	background: linear-gradient(to right, rgba(200, 200, 200, 0), #b3b3b3, #b3b3b3, rgba(200, 200, 200, 0))
+	color: $grey-dark
+	border-radius: 0
+	text-align: center
+	padding: 0.6em 0
+	position: relative
+	border: 1px solid transparent
+	transition: width 0.15s ease-in-out
+	margin-top: 1rem
+	margin-bottom: 1rem
+	&:hover
+		width: 100%
+		transition: width 0.15s ease-in-out
+@media(max-width: 700px)
+	.grid
+		.box
+			width: 45%
+
+.bold
+	font-weight: 700
+
+.semi-bold
+	font-weight: 600
+
+.center
+	text-align: center
+
+img
+	width: 100%
+
+section
+	border-bottom: 1px solid $black
+
+.inner
+	width: 90%
+	max-width: 1000px
+	margin: 0 auto
+	padding: 0
+	position: relative
+
+.content-wrapper
+	padding: 4rem 0
+	overflow: hidden
+@media(max-width: 750px)
+	.content-wrapper
+		padding: 2rem 0
+
+section:first-of-type
+	margin-top: 120px
+
+.white-transparent
+	background: rgba(255, 255, 255, 0.6)
+
+.no-border
+	border: none
+
+.content-below
+	margin-top: 1rem
+
+.para-width
+	max-width: 800px
+	width: 100%
+
+.sub-section
+	margin-top: 2rem
+
+// --- Icons and logos ---
+.icon
+	display: block
+	padding: 0 0
+	text-indent: -9999px
+	background-size: 100% 100%
+	background-position: center center
+	background-repeat: no-repeat
+	position: relative
+	&:hover
+		border-bottom: none
+
+.hamburger
+	background-image: url(../img/icons/menu_icon_black.png)
+
+.logo-silseth-sten
+	background-image: url(../img/icons/silseth_sten.svg)
+
+.logo-norsk-berg
+	background-image: url(../img/icons/norskberg.svg)
+
+.logo-mestermerket
+	background-image: url(../img/icons/mestermerket.svg)
+
+.logo-norsk-kvalitet
+	background-image: url(../img/icons/norsk_kvalitet.svg)
+
+.down-arrow
+	background-image: url(../img/icons/arrow_right_black.svg)
+	font-size: 25px
+	display: inline-block
+	transform: rotate(90deg)
+// End of icons and logos
+
+// --- menu ---
+#mobilemenu_show
+	display: none
+
+#menu
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	background: $grey-transparent
+	padding: 20px 0
+	overflow: hidden
+
+	a
+		text-decoration: none
+		font-size: 0.9rem
+		line-height: 1em
+	span
+		margin-left: 5px
+		margin-right: 5px
+
+	.upper
+		display: flex
+		flex-direction: row-reverse
+
+	.lower
+		display: flex
+		align-items: center
+		justify-content: space-between
+		li
+			display: inline
+			a
+				text-transform: uppercase
+				font-weight: 700
+				padding-top: 0.5em
+				padding-bottom: 0.5em
+				&:hover
+					border-bottom: 4px solid ($grey-dark + 50)
+					border-top: 4px solid ($grey-dark + 50)
+		.active
+			a
+				border-bottom: 4px solid ($grey-dark + 50)
+				border-top: 4px solid ($grey-dark + 50)
+
+#menu.large
+	height: 120px
+	transition: height 0.3s ease-in-out
+	.lower
+		margin-top: -10px
+	.logo-silseth-sten
+		height: 65px
+		width: 300px
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
+	ul
+		margin-top: 20px
+		li a
+			font-size: 1.1rem
+			margin-left: 20px
+			transition: font-size 0.3s ease-in-out
+
+@media(max-width: 1050px)
+	#menu.large
+		.upper
+			a,span
+				font-size: 0.9rem
+		ul li a
+			font-size: 1rem
+			margin-left: 10px
+		.logo-silseth-sten
+
+@media(max-width: 900px)
+	#menu.large
+		height: 100px
+		.upper
+			a,span
+				font-size: 0.8rem
+				transition: font-size 0.3s ease-in-out
+		ul li a
+			font-size: 0.9rem
+			transition: font-size 0.3s ease-in-out
+		.logo-silseth-sten
+			height: 60px
+			width: 200px
+			transition: height 0.3s ease-in-out
+			transition: width 0.3s ease-in-out
+
+@media(max-width: 750px)
+	#menu.large
+		height: 100px
+		ul li a
+			font-size: 0.85rem
+			margin-left: 5px
+			transition: font-size 0.3s ease-in-out
+		.logo-silseth-sten
+			height: 50px
+			width: 200px
+			top: 3px
+			transition: height 0.3s ease-in-out
+			transition: width 0.3s ease-in-out
+
+#menu.small
+	height: 70px
+	transition: height 0.3s ease-in-out
+	.upper
+		display: none
+	.lower
+		margin-top: -12px
+	.logo-silseth-sten
+		height: 50px
+		width: 200px
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
+
+	ul
+		margin-top: 10px
+		li a
+			font-size: 1rem
+			margin-left: 20px
+			transition: font-size 0.3s ease-in-out
+
+@media(max-width: 900px)
+	#menu.small
+		ul li a
+			font-size: 0.9rem
+			transition: font-size 0.3s ease-in-out
+
+@media(max-width: 800px)
+	#menu.small
+		ul li a
+			font-size: 0.8rem
+			transition: font-size 0.3s ease-in-out
+			margin-left: 10px
+
+@media(max-width: 700px)
+	section:first-of-type
+		margin-top: 70px
+
+	#menu
+		display: none
+	#mobilemenu_show
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 70px
+		z-index: 100
+		background: rgba(212, 212, 212, 1)
+		.logo-wrapper
+			position: absolute
+			left: 5%
+			top: -16px
+		.logo-silseth-sten
+			height: 65px
+			width: 200px
+			top: 16px
+		.hamburger
+			position: absolute
+			right: 5%
+			top: 24px
+
+		.logo-silseth-sten
+			font-size: 70px
+
+@media(min-width: 700px)
+	#mobilemenu
+		display: none
+
+// Styles for the slideout menu on mobile
+.mm-menu, .mm-panels>.mm-panel:not(.mm-hidden)
+	background: $grey
+	color: $black
+	overflow: hidden
+
+	.mm-listview>li
+		color: $black
+		border-color: ($grey-dark + 50)
+		margin-left: -22px
+
+		a
+			font-size: 1.25rem
+			padding: 1em 0 1em 42px
+			text-transform: uppercase
+			font-weight: 600
+			&:active, &:focus, &:hover
+				color: $grey
+				background: $grey-dark
+				border-bottom: none
+// end of menu
+
+// --- Footer --
+.footer
+	background: url(../img/background_top.jpg) no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	border-bottom: none
+	.content-wrapper
+		padding-bottom: 2rem
+	.logo-silseth-sten
+		height: 60px
+		width: 280px
+		transition: height 0.3s ease-in-out
+		transition: width 0.3s ease-in-out
+		margin: 2rem 0 1rem 0
+	h2
+		margin-bottom: 0
+	.overlay
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(255, 255, 255, 0.5)
+	.info-bar
+		display: flex
+		justify-content: space-between
+		.info
+			display: flex
+			width: 70%
+			.item
+				margin-right: 15px
+		p,a
+			font-size: 1rem
+			text-decoration: none
+			margin-bottom: 0
+		.logos
+			display: flex
+			width: 30%
+			justify-content: flex-end
+			margin-top: -5px
+	.logos
+		margin-top: -30px
+		.logo-wrapper
+			margin-right: 10px
+	.logo-norsk-berg
+		width: 50px
+		height: 50px
+	.logo-norsk-kvalitet
+		height: 50px
+		width: 100px
+	.logo-mestermerket
+		height: 50px
+		width: 50px
+
+	form
+		margin-top: 1.5rem
+	input[type="text"], input[type="tel"], input[type="email"], textarea
+		border-radius: $radius
+		padding: 0.5rem
+		border: 1px solid $grey-transparent
+		font-size: 1.2rem
+		&:focus
+			outline: none
+			border: 1px solid $grey-dark
+	textarea
+		width: 100%
+		min-height: 150px
+		height: 100%
+		margin-top: 1rem
+
+	.input-fields
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.required
+			width: 32%
+			input
+				width: 100%
+
+	input[type="submit"]
+		margin-top: 1rem
+		width: 100%
+		font-size: 1rem
+
+	.fb_invalid
+		input, textarea
+			border: 1px solid red
+
+	.copyright
+		margin-top: 2rem
+		text-align: center
+		a
+			text-transform: uppercase
+			font-size: 0.8rem
+			font-weight: 700
+			color: $grey-dark
+			text-decoration: none
+			padding: 0.5em
+			&:hover
+				border-bottom: 1px solid $grey-dark
+				border-top: 1px solid $grey-dark
+
+@media(max-width: 900px)
+	.footer
+		.info-bar
+			flex-wrap: wrap
+			.info
+				flex-wrap: wrap
+				width: 100%
+				order: 2
+				.item
+					width: 50%
+					margin-right: 0
+				.item:nth-child(1), .item:nth-child(2)
+					margin-bottom: 1rem
+			.logos
+				width: 100%
+				align-items: center
+				flex-direction: row-reverse
+				margin: 10px 0 1rem 0
+				.logo-wrapper
+					margin-right: 50px
+					&:nth-child(1)
+						order: 1
+					&:nth-child(2)
+						order: 3
+					&:nth-child(3)
+						order: 2
+				.logo-norsk-kvalitet
+					height: 55px
+					width: 125px
+				.logo-mestermerket
+					width: 55px
+					height: 55px
+				.logo-norsk-berg
+					width: 55px
+					height: 55px
+
+@media(max-width: 700px)
+	.footer
+		.input-fields
+			.required
+				width: 48%
+				.phone
+					margin-top: 1rem
+
+@media(max-width: 550px)
+	.footer
+		.info-bar
+			.info
+				.item
+					width: 49%
+				.item:nth-child(1), .item:nth-child(3)
+					margin-right: 2%
+			.logos
+				justify-content: flex-end
+				.logo-norsk-kvalitet
+					height: 40px
+					width: 90px
+				.logo-mestermerket
+					width: 40px
+					height: 40px
+				.logo-norsk-berg
+					width: 40px
+					height: 40px
+		.input-fields .required
+			width: 100%
+			margin-top: 1rem
+			.phone
+				margin-top: 0
+// End of footer
+
+// --- two-boxes ---
+.two-boxes
+	overflow: hidden
+	display: flex
+	.box
+		width: 49%
+	.box:first-child
+		margin-right: 2%
+	p
+		margin-bottom: 1rem
+	p:last-child
+		margin-bottom: 0
+.two-boxes.align-center
+	align-items: center
+
+.two-boxes.content-below
+	margin-top: 2rem
+
+@media(max-width: 750px)
+	.two-boxes
+		flex-direction: column
+		.box
+			width: 100%
+		.box:first-child
+			margin: 0 auto
+			margin-bottom: 2rem
+// end of two-boxes
+
+// --- three-boxes ---
+.three-boxes
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.box
+		width: 33.333333333%
+		display: flex
+		flex-direction: column
+
+@media(max-width: 750px)
+	.three-boxes
+		.box
+			width: 50%
+
+@media(max-width: 500px)
+	.three-boxes
+		.box
+			width: 100%
+// end of three-boxes
+
+// --- price-list ---
+.price-list
+	text-align: center
+	padding: 2rem 0
+	border-bottom: 1px solid $grey
+	border-top: 1px solid $grey
+	position: relative
+	span
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		right: 0
+	.logo-wrapper
+		display: inline
+	h3
+		display: inline
+		margin-left: 10px
+// end of price-list
+
+// --- included ---
+.included
+	li
+		margin-bottom: 0.05rem
+		display: flex
+		align-items: baseline
+	span
+		font-weight: 600
+		margin-right: 10px
+	p
+// end of included
+
+// --- grid ---
+.grid
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: baseline
+	.box
+		width: 28%
+		margin-bottom: 2rem
+		position: relative
+		.number
+			position: absolute
+			top: 10%
+			right: 5%
+			font-weight: 700
+			font-size: 1rem
+			background: $grey-dark
+			padding: 1em
+			border-radius: 100%
+			color: $white
+		p
+			margin-top: 5px
+			margin: 0
+
+// end of grid
+
+// --- slideshow ---
+.slideshow
+	.slide
+		min-width: 1px
+		min-height: 1px
+		.img-caption
+			margin-top: 1rem
+	.two-boxes
+		// width: 80%
+		// margin: 0 auto
+		.box:first-child
+			padding-left: 100px
+		.box:last-child
+			padding-right: 100px
+
+@media(max-width: 750px)
+	.slideshow .two-boxes
+		.box
+			width: 80%
+			margin: 0 auto
+		.box:first-child
+			padding-left: 25px
+			padding-right: 25px
+			margin-bottom: 2rem
+			width: 100%
+			h2
+				width: 80%
+				margin: 0 auto
+				margin-bottom: 1rem
+			p
+				width: 80%
+				margin: 0 auto
+		.box:last-child
+			padding-left: 25px
+			padding-right: 25px
+			img
+				max-height: 250px
+				margin: 0 auto
+				width: auto
+
+@media(max-width: 400px)
+	.slideshow .two-boxes
+		.box:first-child p
+			width: 75%
+			margin: 0 auto
+// end of slideshow
+
+// --- Isotope grid with filtering ---
+#filter-wrapper
+	border-top: 1px solid $grey
+	border-bottom: 1px solid $grey
+	padding: 1rem 0
+	.inner
+		display: flex
+		align-items: center
+		h3
+			color: $grey
+			margin-right: 50px
+	#filter
+		display: flex
+		flex-wrap: wrap
+		li
+			display: inline
+			margin-right: 20px
+			font-weight: 700
+			text-transform: uppercase
+			margin-top: 0.2rem
+			margin-bottom: 0.2rem
+			a
+				padding: 0.2em 0
+				&:hover, &:active, &:focus
+					outline: none
+					border-top: 3px solid $grey
+					border-bottom: 3px solid $grey
+
+@media(max-width: 700px)
+	#filter-wrapper h3
+		margin-right: 35px
+
+@media(max-width: 600px)
+	#filter-wrapper
+		.inner
+			display: flex
+			flex-wrap: wrap
+		h3
+			width: 100%
+			margin-bottom: 0.5rem
+		#filter
+			max-width: 500px
+			flex-wrap: wrap
+			li
+				margin-right: 20px
+				font-size: 0.8rem
+
+#stones
+	width: 100%
+	a
+		display: block
+		position: relative
+		width: 100%
+		height: 100%
+		transition: none
+
+	.refitem
+		position: relative
+		padding: 2rem
+		width: 300px
+		height: 300px
+		overflow: hidden
+		a:hover
+			border-bottom: none
+		.price p
+			text-align: center
+			font-size: 0.9rem
+			font-weight: 700
+		.number
+			position: absolute
+			top: 10%
+			right: 5%
+			background: $grey-dark
+			border-radius: 100%
+			p
+				font-weight: 700
+				font-size: 0.7rem
+				padding: 1em
+				color: $white
+				margin: 0
+
+	.bkg-img
+		width: 100%
+		height: 100%
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-size: contain
+
+	.overlay
+		position: absolute
+		display: block
+		bottom: 0
+		left: 0
+		right: 0
+		top: 0
+		background-color: $grey-light
+		opacity: 0
+		-webkit-transition: all 0.3s ease-out 0.1s
+		-moz-transition: all 0.3s ease-out 0.1s
+		-o-transition: all 0.3s ease-out 0.1s
+		-ms-transition: all 0.3s ease-out 0.1s
+		transition: all 0.3s ease-out 0.1s
+
+	.refitem.selected
+		.overlay
+			opacity: 1
+		.info
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 1rem
+
+			.txt
+				width: 30%
+				transition: width 0.3s ease-in-out
+				h4, p
+					font-size: 1rem
+				h4
+					font-weight: 700
+				p
+					margin-bottom: 0.2rem
+				.bold
+					margin-top: 0.6rem
+			.img
+				width: 65%
+				transition: width 0.3s ease-in-out
+
+		.price
+			display: none
+
+		.number
+			top: 7%
+			right: 35%
+			p
+				font-size: 1rem
+
+/**** Isotope Filtering ***
+.isotope-item
+	z-index: 2
+
+.isotope-hidden.isotope-item
+	pointer-events: none
+	z-index: 1
+
+/**** Isotope transitions ***
+.isotope
+	-webkit-transition-duration: 0.8s
+	-moz-transition-duration: 0.8s
+	-ms-transition-duration: 0.8s
+	-o-transition-duration: 0.8s
+	transition-duration: 0.8s
+
+	.isotope-item
+		-webkit-transition-duration: 0.8s
+		-moz-transition-duration: 0.8s
+		-ms-transition-duration: 0.8s
+		-o-transition-duration: 0.8s
+		transition-duration: 0.8s
+		-webkit-transition-property: -webkit-transform, opacity
+		-moz-transition-property: -moz-transform, opacity
+		-ms-transition-property: -ms-transform, opacity
+		-o-transition-property: -o-transform, opacity
+		transition-property: transform, opacity
+		-webkit-transition-property: height, width
+		-moz-transition-property: height, width
+		-ms-transition-property: height, width
+		-o-transition-property: height, width
+		transition-property: height, width
+
+	&.no-transition
+		-webkit-transition-duration: 0s
+		-moz-transition-duration: 0s
+		-ms-transition-duration: 0s
+		-o-transition-duration: 0s
+		transition-duration: 0s
+		.isotope-item
+			-webkit-transition-duration: 0s
+			-moz-transition-duration: 0s
+			-ms-transition-duration: 0s
+			-o-transition-duration: 0s
+			transition-duration: 0s
+
+	.isotope-item.no-transition
+		-webkit-transition-duration: 0s
+		-moz-transition-duration: 0s
+		-ms-transition-duration: 0s
+		-o-transition-duration: 0s
+		transition-duration: 0s
+
+/**** Isotope filtering ***
+.isotope-item
+	z-index: 2
+
+.isotope-hidden.isotope-item
+	pointer-events: none
+	z-index: 1
+
+@media screen and (min-width: 750px) and (max-width: 1200px)
+	#stones
+		.refitem.selected
+			.info
+				.img
+					width: 53%
+					transition: width 0.3s ease-in-out
+				.txt
+					width: 37%
+					transition: width 0.3s ease-in-out
+			.number
+				right: 42%
+
+@media screen and (max-width: 900px)
+	#stones .refitem
+		.overlay .info
+			// padding: 0 15px
+		.txt
+			width: 100%
+		.img
+			display: none
+
+	#stones .refitem.selected
+		.overlay
+			opacity: 0.8
+			transition: opacity 0.3s ease-in-out
+			.info
+				.txt
+					max-width: 80%
+					width: 100%
+					margin: 0 auto
+					.item
+						width: 50%
+						float: left
+						padding: 5px 0
+	#stones .refitem.selected .number
+		display: none
+
+@media screen and (max-width: 650px)
+	#stones .refitem
+		padding: 1rem
+
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					max-width: 90%
+					width: 100%
+					margin: 0 auto
+
+@media screen and (max-width: 575px)
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					max-width: 100%
+					width: 100%
+
+@media screen and (max-width: 500px)
+	#stones .refitem.selected
+		.overlay
+			.info
+				.txt
+					h4, p
+						font-size: 0.8rem
+
+@media screen and (max-width: 350px)
+	#stones .refitem
+		.price p
+			font-size: 0.6rem
+// End of isotope grid with filtering
+
+// ---- PAGE SPEFICIC STYLES ----
+// --- TILBEHØR ---
+#tilbehor
+	.sub-section h3
+		margin-bottom: 2rem
+	.grid
+		h4
+			margin-bottom: 0.5rem
+
+@media(max-width: 1000px)
+	#tilbehor
+		.grid
+			.box
+				width: 45%
+
+@media(max-width: 450px)
+	#tilbehor
+		.grid
+			.box
+				width: 100%
+				img
+					max-width: 80%
+					display: block
+					margin: 0 auto

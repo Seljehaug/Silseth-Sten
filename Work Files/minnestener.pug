@@ -1,0 +1,572 @@
+doctype html
+html(lang="no")
+	head
+		title Silseth Sten - Minnestener
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		// jQuery
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		// Styling
+		link(rel="stylesheet", type="text/css", href="css/normalize.css")
+		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		// bxSlider
+		script(src="js/bxslider/jquery.bxslider.min.js")
+		link(href="js/bxslider/jquery.bxslider.css", rel="stylesheet")
+		// JS
+		script(src="js/silseth.js")
+		// Mmenu 
+		link(rel="stylesheet", href="js/mmenu/css/jquery.mmenu.css", media="screen and (max-width: 700px)")
+		link(rel="stylesheet", href="js/mmenu/extensions/positioning/jquery.mmenu.positioning.css", media="screen and (max-width: 700px)")
+		script(src="js/mmenu/js/jquery.mmenu.min.js")
+		// imagesloaded plugin
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+		// Isotope 
+		script(src="js/isotope.pkgd.min.js")
+		script(src="js/isotope-custom.js")
+		// Typekit
+		<script src="https://use.typekit.net/mrh3ute.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>	
+	
+	body#minnestener
+		#site.page_home(canvas="container")
+			include includes/menu
+			
+			section.no-border
+				.inner
+					.content-wrapper
+						// Hvis du vil at slideshowene skal være like høye må bildene ha samme høyde.
+						.two-boxes
+							.box
+								h2 Personlig preg
+								.slideshow
+									.slide
+										img(src="img/personlig_preg.jpg")
+									.slide
+										img(src="img/personlig_preg.jpg")
+								.content-below
+									p På flere av våre minnestener kan et illustrerende symbol, et 
+										| naturbilde, eller et foto av avdøde graveres direkte inn i 
+										| steinen. Bildet lages etter kundens eget motiv.	
+									a(href="#", data-filter=".cat_personlig").semi-bold.filter.scroll Velg &laquo;Personlig preg&raquo; lengre ned på siden for å se eksempler. 
+							
+							.box
+								h2 Kunstmalet
+								.slideshow
+									.slide
+										img(src="img/personlig_preg.jpg")
+									.slide
+										img(src="img/personlig_preg.jpg")
+								.content-below
+									p Litt tekst om kunstmaling... Latius. At et aliquunt. Elicium alia num es verat ilitio 
+										| et aut es dolorepudi atius illoribus pa ad quos eat ea venditatiat odicideribus es eos id quae.
+									a(href="#", data-filter=".cat_kunstmalet").semi-bold.filter.scroll Velg &laquo;Kunstmalet&raquo; lengre ned på siden for å se eksempler
+
+						.two-boxes.content-below
+							.box
+								h2 Porselen
+								.slideshow
+									.slide
+										img(src="img/stein.jpg")
+									.slide
+										img(src="img/personlig_preg.jpg")
+								.content-below
+									p Litt tekst om porselen... Et aliquunt. Elicium alia num es verat ilitio et aut es dolorepudi 
+										| atius illoribus pa ad quos eat ea venditatiat odicideribus es eos id quae.
+									a(href="#", data-filter=".cat_porselen").semi-bold.filter.scroll Velg &laquo;Porselen&raquo; lengre ned på siden for å se eksempler
+									
+							.box
+								h2 Naturstein
+								.slideshow
+									.slide
+										img(src="img/stein.jpg")
+									.slide
+										img(src="img/personlig_preg.jpg")
+								.content-below
+									p Litt tekst om naturstein... Latius. At et aliquunt. Elicium alia num es verat ilitio 
+										| et aut es dolorepudi atius illoribus pa ad quos eat ea venditatiat odicideribus es eos id quae.
+									a(href="#", data-filter=".cat_naturstein").semi-bold.filter.scroll Velg &laquo;Naturstein&raquo; lengre ned på siden for å se eksempler.
+			#test
+			section.no-border
+				#filter-wrapper
+					.inner
+						h3 Stenvelger
+						ul#filter
+							li
+								a(href='#', data-filter='*').filter Alle stener
+							li
+								a(href='#', data-filter='.cat_personlig').filter Personlig preg 
+							li
+								a(href='#', data-filter='.cat_kunstmalet').filter Kunstmalet
+							li
+								a(href='#', data-filter='.cat_porselen').filter Porselen
+							li
+								a(href='#', data-filter='.cat_naturstein').filter Naturstein
+				.inner
+					.content-wrapper
+						#stones-gallery
+							#stones
+								.refitem.cat_personlig
+									a(href='', title='Sten 1')
+										.bkg-img(style="background-image: url('img/grid_1.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_1.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 87
+
+								.refitem.cat_personlig
+									a(href='', title='Sten 2')
+										.bkg-img(style="background-image: url('img/grid_2.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_2.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 81
+														
+								.refitem.cat_personlig
+									a(href='', title='Sten 3')
+										.bkg-img(style="background-image: url('img/grid_3.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_3.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 105
+														
+								.refitem.cat_personlig
+									a(href='', title='Sten 4')
+										.bkg-img(style="background-image: url('img/grid_4.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_4.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 97
+													
+								.refitem.cat_kunstmalet
+									a(href='', title='Sten 5')
+										.bkg-img(style="background-image: url('img/grid_5.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_5.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 83
+													
+								.refitem.cat_kunstmalet
+									a(href='', title='Sten 6')
+										.bkg-img(style="background-image: url('img/grid_6.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_6.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 54
+													
+								.refitem.cat_kunstmalet
+									a(href='', title='Sten 7')
+										.bkg-img(style="background-image: url('img/grid_2.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_2.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 65
+											
+								.refitem.cat_porselen
+									a(href='', title='Sten 8')
+										.bkg-img(style="background-image: url('img/grid_4.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_4.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 72
+													
+								.refitem.cat_porselen
+									a(href='', title='Sten 9')
+										.bkg-img(style="background-image: url('img/grid_3.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_3.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 92
+										
+								.refitem.cat_porselen
+									a(href='', title='Sten 10')
+										.bkg-img(style="background-image: url('img/grid_5.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_5.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 82
+										
+								.refitem.cat_naturstein
+									a(href='', title='Sten 11')
+										.bkg-img(style="background-image: url('img/grid_1.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_1.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 101
+											
+								.refitem.cat_naturstein
+									a(href='', title='Sten 12')
+										.bkg-img(style="background-image: url('img/grid_2.png')")
+										.overlay
+											.info
+												.img
+													img(src='img/grid_2.png')
+												.txt
+													.item
+														h4 Steinsort på bildet
+														p Orion blå
+													.item
+														h4 Størrelse på bildet
+														p 70x60 cm
+													.item
+														h4 Ornament
+														p Nedsenket med hvit lakk
+													.item
+														h4 Skrift
+														p Nedsenket med hvit lakk
+													.item
+														h4 Forside
+														p Polert med fas
+													.item
+														h4 Kanter
+														p Sandblåst
+													.item
+														h4 Bakside
+														p Sandblåst
+													.item
+														p.bold Pris fra 19.800,-
+										.price
+											p Pris fra: 19.800,-
+										.number
+											p 76
+
+			section.price-list
+				.inner
+					a(href="http://www.silseth-sten.no/uploads/files/prisliste2017_lr.pdf")
+						.link
+							<span></span>
+							.logo-wrapper
+								a.icon.down-arrow(href='http://www.silseth-sten.no/uploads/files/prisliste2017_lr.pdf') Last ned
+							h3.center Last ned komplett prisliste
+			
+			section.included
+				.inner
+					.content-wrapper
+						h2 Alle stenpriser inkluderer
+						ul
+							li
+								<span>&raquo;</span> 
+								p Forside / front som vist i katalogen, med ett navn og ornament, nedsenket med lakk eller gull. (NB! Ikke bronseskrift)
+							li
+								<span>&raquo;</span> 
+								p Sokkelstein i samme steinsort
+							li
+								<span>&raquo;</span> 
+								p Frakt er inkludert med kr 1.200,-
+							li
+								<span>&raquo;</span> 
+								p Merverdiavgift
+							li
+								<span>&raquo;</span> 
+								p Forskriftsmessig montering på kirkegården
+
+						
+
+			include includes/footer

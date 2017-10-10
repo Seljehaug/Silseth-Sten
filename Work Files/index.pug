@@ -1,0 +1,140 @@
+doctype html
+html(lang="no")
+	head
+		title Silseth Sten - Forside
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		// jQuery
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		// Styling
+		link(rel="stylesheet", type="text/css", href="css/normalize.css")
+		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		// bxSlider
+		script(src="js/bxslider/jquery.bxslider.min.js")
+		link(href="js/bxslider/jquery.bxslider.css", rel="stylesheet")
+		// JS
+		script(src="js/silseth.js")
+		// Mmenu 
+		link(rel="stylesheet", href="js/mmenu/css/jquery.mmenu.css", media="screen and (max-width: 700px)")
+		link(rel="stylesheet", href="js/mmenu/extensions/positioning/jquery.mmenu.positioning.css", media="screen and (max-width: 700px)")
+		script(src="js/mmenu/js/jquery.mmenu.min.js")
+		// imagesloaded plugin
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+		// Isotope 
+		script(src="js/isotope.pkgd.min.js")
+		script(src="js/isotope-custom.js")
+		// Typekit
+		<script src="https://use.typekit.net/mrh3ute.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>	
+			
+	body#home
+		#site.page_home(canvas="container")
+			include includes/menu
+			
+			section.white-transparent
+				.inner
+					.content-wrapper
+						.slideshow
+							.slide
+								.two-boxes.align-center
+									.box
+										h2 Visuell kunst i glass
+										p Vår lokale glasskunstner Sissel Solli Eide samarbeider med oss, 
+											| og lager kunst i glass som blir innfelt i minnestenene. Kombinasjonen 
+											| glass/kunst polert og upolert stein gir et unikt og kraftfullt utrykk. 
+									.box
+										img(src="img/dummystein_1.png")
+											
+							
+							.slide
+								.two-boxes.align-center
+									.box
+										h2 Tittel her...
+										p Do elit non irure ita hic summis doctrina quamquam se nulla qui si minim 
+											| arbitror ab illum voluptate ea exquisitaque ubi aliquip tamen probant nostrud, 
+											| ab quid quorum non quibusdam o non ne concursionibus, nescius culpa pariatur.
+									.box
+										img(src="img/dummystein_2.jpg")
+			
+			section
+				.inner
+					.content-wrapper
+						.two-boxes
+							.box
+								h2 Design din egen minnesten
+								p Med vår nye stenbygger kan du prøve deg fram med ulike steintyper, dekorelement og 
+									| skrifttyper på noen utvalgte stener.
+								a(href="http://stenbygger.silseth-sten.no/").btn Design
+							.box
+								img(src="img/stenbygger.png")
+			section
+				.inner
+					.content-wrapper
+						h2 Minnestener 
+						.grid
+							.box
+								img(src="img/grid_1.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 81
+							.box
+								img(src="img/grid_2.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 78
+							.box
+								img(src="img/grid_3.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 80
+							.box
+								img(src="img/grid_4.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 77
+							.box
+								img(src="img/grid_5.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 82
+							.box
+								img(src="img/grid_6.png")
+								p.bold.center Pris fra 20.200,-
+								span.number 105
+						
+							a.btn.btn-black-gradient(href="#") Se alle minnestener 
+								.overlay
+
+
+			section
+				.inner
+					.content-wrapper
+						.two-boxes.align-center
+							.box 
+								h2 Rett fra norsk natur <br> - våre unike natursteiner
+								// Link til punktet "naturstein" på undersiden minnestener
+								a(href="#").btn Les mer
+							.box
+								.slideshow
+									.slide
+										img(src="img/stein.jpg")
+									.slide 
+										img(src="img/grid_1.png")
+									.slide
+										img(src="img/grid_2.png")
+
+			section
+				.inner
+					.content-wrapper
+						.two-boxes.align-center
+							.box 
+								h2 Bygningssten
+								p Vårt firma har levert bygningsstein til mange kjente bygninger i Sverige, 
+									| Finland, og Norge. Bygningssteinen brukes til fasadestein, kanstein, trapper 
+									| avsatser, gulvflis, peiser fonteneanlegg og mye mer
+								a(href="#").btn Les mer
+							.box
+								.slideshow
+									.slide
+										img(src="img/bygningssten.jpg")
+									.slide 
+										img(src="img/grid_1.png")
+									.slide
+										img(src="img/grid_2.png")
+			
+			include includes/footer
